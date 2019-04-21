@@ -151,21 +151,26 @@
 </article>
 
 
-
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
     <!-- && theme.disqus.enabled <div class="blog-post-comments">
         <div id="disqus_thread">
             <noscript>Please enable JavaScript to view the comments.</noscript>
         </div>
     </div> -->
     <div id="vcomments"></div>
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+   
     <script>
         new Valine({
             el: '#vcomments',
             appId: '1xkWvBBcVNOuCSs7iYmxXv9d-gzGzoHsz',
-            appKey: 'czIcghVV8lSRBdPQa9UzaNXP'
+            appKey: 'czIcghVV8lSRBdPQa9UzaNXP',
+            notify:true,
+            verify:true,
+            placeholder:'Come on Baby!'
         })
+       
+        
     </script>
 
 
