@@ -180,7 +180,7 @@
       max-height: 1000px;
     }
     .js-toc-expanded {
-      max-height: 1000px;
+      max-height: 800px;
       overflow-y: scroll;
     }
     .js-toc-expanded::-webkit-scrollbar {
@@ -193,19 +193,19 @@
     var isExpanded = false;
     $(document).ready(function() {
       if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
-        $("body")[0].style.paddingLeft = "2rem";
-        $("body")[0].style.paddingRight = "2rem";
+      //   $("body")[0].style.paddingLeft = "2rem";
+      //   $("body")[0].style.paddingRight = "2rem";
        
-        //移动端
-        $("body")[0].style.maxWidth = "48rem!important";
-        if ($(".js-toc").length == 0) {
-          $("#bottom-placeholder")[0].style.height = "0px";
-        }else{
-          $("#bottom-placeholder")[0].style.height = "64px";
-        }
-      } else {
-        $("body")[0].style.maxWidth = "60%!important";
-        $("#bottom-placeholder")[0].style.height = "0px";
+      //   //移动端
+      //   $("body")[0].style.maxWidth = "48rem!important";
+      //   if ($(".js-toc").length == 0) {
+      //     $("#bottom-placeholder")[0].style.height = "0px";
+      //   }else{
+      //     $("#bottom-placeholder")[0].style.height = "64px";
+      //   }
+      // } else {
+      //   $("body")[0].style.maxWidth = "60%!important";
+      //   $("#bottom-placeholder")[0].style.height = "0px";
       }
       // if (document.documentElement.clientWidth <= 1250) {
       //   document.getElementsByClassName("js-toc")[0].style.display = "none";
@@ -226,6 +226,26 @@
         showScrollTip();
         $(window).bind("scroll", function() {
           showScrollTip();
+          // var liTop = $(".is-active-li").position().top;    
+          // var contentH = $(".js-toc").height();
+          // var clientH = 800;
+          // var scrolltop =0;
+          // if(liTop>800&&liTop<850){
+          //   scrolltop = 400;
+          // }else if(liTop>1200&&liTop<1250){
+          //   scrolltop = 800;
+          // }else if(liTop>1600&&liTop<1650){
+          //   scrolltop = 1200;
+          // }
+
+
+
+          
+          // if((liTop+800)>contentH){
+          //   scrolltop = contentH-800;
+          // }
+          // $(".js-toc").animate({scrollTop:scrolltop},300);   
+          // console.log($(".is-active-li").position().top);          
         });
       }
     });
