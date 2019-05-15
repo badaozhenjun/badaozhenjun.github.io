@@ -243,19 +243,19 @@
     var isExpanded = false;
     $(document).ready(function() {
       if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
-      //   $("body")[0].style.paddingLeft = "2rem";
-      //   $("body")[0].style.paddingRight = "2rem";
+        $("body")[0].style.paddingLeft = "2rem";
+        $("body")[0].style.paddingRight = "2rem";
        
-      //   //移动端
-      //   $("body")[0].style.maxWidth = "48rem!important";
-      //   if ($(".js-toc").length == 0) {
-      //     $("#bottom-placeholder")[0].style.height = "0px";
-      //   }else{
-      //     $("#bottom-placeholder")[0].style.height = "64px";
-      //   }
-      // } else {
-      //   $("body")[0].style.maxWidth = "60%!important";
-      //   $("#bottom-placeholder")[0].style.height = "0px";
+        //移动端
+        $("body")[0].style.maxWidth = "48rem!important";
+        if ($(".js-toc").length == 0) {
+          $("#bottom-placeholder")[0].style.height = "0px";
+        }else{
+          $("#bottom-placeholder")[0].style.height = "64px";
+        }
+      } else {
+        // $("body")[0].style.maxWidth = "60%!important";
+        $("#bottom-placeholder")[0].style.height = "0px";
       }
       // if (document.documentElement.clientWidth <= 1250) {
       //   document.getElementsByClassName("js-toc")[0].style.display = "none";
