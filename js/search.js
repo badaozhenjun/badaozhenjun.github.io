@@ -27,7 +27,9 @@ var searchFunc = function(path, searchId, contentId) {
   function stripHtml(html) {
     html = html.replace(/<style([\s\S]*?)<\/style>/gi, "");
     html = html.replace(/<script([\s\S]*?)<\/script>/gi, "");
-    html = html.replace(/<figure([\s\S]*?)<\/figure>/gi, "");
+    // html = html.replace(/<figure([\s\S]*?)<\/figure>/gi, "");
+
+    
     html = html.replace(/<\/div>/ig, "\n");
     html = html.replace(/<\/li>/ig, "\n");
     html = html.replace(/<li>/ig, "  *  ");
@@ -90,7 +92,7 @@ var searchFunc = function(path, searchId, contentId) {
           if (dataContent !== "") {
             keywords.forEach(function(keyword) {
               indexTitle = dataTitle.indexOf(keyword);
-              indexContent = dataContent.indexOf(keyword);
+              indexContent = dataContent.toLowerCase().indexOf(keyword);
 
               if( indexTitle >= 0 || indexContent >= 0 ){
                 matches += 1;

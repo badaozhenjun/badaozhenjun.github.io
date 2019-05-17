@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="1. 先下载驱动12链接：https://pan.baidu.com/s/15KN5bs_ZHSaAudTG4jT-RQ 提取码：x4s9 2. 连接打印机第一步 第二步 第三步 第四步 第五步1//ZSH/HP LaserJet M1005 虽然很老但是将就着用吧">
+<meta name="keywords" content="ios,物联网,人工智能,网络安全">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实验室如何连接M1005打印机">
+<meta property="og:url" content="http://yoursite.com/posts/32c97101/index.html">
+<meta property="og:site_name" content="六搗真君">
+<meta property="og:description" content="1. 先下载驱动12链接：https://pan.baidu.com/s/15KN5bs_ZHSaAudTG4jT-RQ 提取码：x4s9 2. 连接打印机第一步 第二步 第三步 第四步 第五步1//ZSH/HP LaserJet M1005 虽然很老但是将就着用吧">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190517111307.png">
+<meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190517111346.png">
+<meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190517111419.png">
+<meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190517111444.png">
+<meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190517111537.png">
+<meta property="og:updated_time" content="2019-05-17T04:28:04.708Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="实验室如何连接M1005打印机">
+<meta name="twitter:description" content="1. 先下载驱动12链接：https://pan.baidu.com/s/15KN5bs_ZHSaAudTG4jT-RQ 提取码：x4s9 2. 连接打印机第一步 第二步 第三步 第四步 第五步1//ZSH/HP LaserJet M1005 虽然很老但是将就着用吧">
+<meta name="twitter:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190517111307.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>实验室如何连接M1005打印机</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+ 
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/posts/4a17b156/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/posts/32c97101/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/posts/32c97101/&text=实验室如何连接M1005打印机"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/posts/32c97101/&title=实验室如何连接M1005打印机"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/posts/32c97101/&is_video=false&description=实验室如何连接M1005打印机"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=实验室如何连接M1005打印机&body=Check out this article: http://yoursite.com/posts/32c97101/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/posts/32c97101/&title=实验室如何连接M1005打印机"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/posts/32c97101/&title=实验室如何连接M1005打印机"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/posts/32c97101/&title=实验室如何连接M1005打印机"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/posts/32c97101/&title=实验室如何连接M1005打印机"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/posts/32c97101/&name=实验室如何连接M1005打印机&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    <!-- <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-先下载驱动"><span class="toc-number">1.</span> <span class="toc-text">1. 先下载驱动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-连接打印机"><span class="toc-number">2.</span> <span class="toc-text">2. 连接打印机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步"><span class="toc-number">2.1.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二步"><span class="toc-number">2.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三步"><span class="toc-number">2.3.</span> <span class="toc-text">第三步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第四步"><span class="toc-number">2.4.</span> <span class="toc-text">第四步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第五步"><span class="toc-number">2.5.</span> <span class="toc-text">第五步</span></a></li></ol></li></ol>
+    </div> -->
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        实验室如何连接M1005打印机
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">六搗真君</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-05-17T02:59:37.000Z" itemprop="datePublished">2019-05-17</time>
+        
+        (Updated: <time datetime="2019-05-17T04:28:04.708Z" itemprop="dateModified">2019-05-17</time>)
+        
+      
+    </div>
+
+ 
+ <style>
+        .tag-link::before{
+          color: #2bbc8a;
+          content: "#";
+        }
+      </style>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="1-先下载驱动"><a href="#1-先下载驱动" class="headerlink" title="1. 先下载驱动"></a>1. 先下载驱动</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">链接：https://pan.baidu.com/s/15KN5bs_ZHSaAudTG4jT-RQ </span><br><span class="line">提取码：x4s9</span><br></pre></td></tr></table></figure>
+<h2 id="2-连接打印机"><a href="#2-连接打印机" class="headerlink" title="2. 连接打印机"></a>2. 连接打印机</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p><img src="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190517111307.png" alt></p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p><img src="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190517111346.png" alt></p>
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p><img src="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190517111419.png" alt></p>
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p><img src="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190517111444.png" alt></p>
+<h3 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//ZSH/HP LaserJet M1005</span><br></pre></td></tr></table></figure>
+<p>虽然很老但是将就着用吧</p>
+<p><img src="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190517111537.png" alt></p>
+
+  </div>
+  <!-- <div class="js-toc"></div> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/css/tocbot.css"><style>
+    .js-toc {
+        width: 200px;
+        height: auto;
+        z-index: 98;
+        background-color: rgba(255,255,255,0);
+        transform: translateX(0);
+        right: calc((100% - 10px) );
+        top: 60px;
+        position: fixed;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+  </style><script src="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/js/tocbot.js"></script><div class="js-toc"></div><script type="text/javascript">
+    tocbot.init({"contentSelector":".content","scrollSmooth":true,"headingSelector":"h1, h2, h3, h4, h5","headingsOffset":45,"scrollSmoothOffset":-45,"tocSelector":".js-toc","ignoreSelector":".js-toc-ignore","linkClass":"toc-link","extraLinkClasses":"","activeLinkClass":"is-active-link","listClass":"toc-list","extraListClasses":"","isCollapsedClass":"is-collapsed","collapsibleClass":"is-collapsible","listItemClass":"toc-list-item","activeListItemClass":"is-active-li","collapseDepth":0,"scrollSmoothDuration":420,"throttleTimeout":50,"positionFixedSelector":null,"positionFixedClass":"is-position-fixed","fixedSidebarOffset":"auto","includeHtml":false,"onClick":false,"orderedList":true,"scrollContainer":null})
+  </script>
+  <style> 
+  /* 目录相关css */
+    .js-toc {
+      width: 180px;
+      display: none;
+    }
+    .is-active-link {
+      color: #2bbc8a !important;
+    }
+    .is-active-link::before {
+      background-color: #eee !important;
+    }
+    .toc-link::before {
+      background-color: #2bbc8a !important;
+    }
+    #header-post #nav{
+      font-size: 1rem;
+    }
+  </style>
+  <style>
+    .zhao-cover-img-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10002;
+
+      background: rgba(0, 0, 0, 0.7);
+      overflow-y: scroll;
+    }
+
+    .zhao-cover-img {
+      width: 70%;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .zhao-no-scroll {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+  </style>
+  <script> //点击放大相关
+     function calculateWH(imgWidth,imgHeight){
+        var sw = $(window).width();
+        var sh = $(window).height();
+        var scale = 0.8;
+        var radio = imgHeight / imgWidth;
+          var width = sw * scale;
+          var height = width * radio;
+          if (height > sh) {
+            height = sh * scale;
+            width = height / radio;
+            if (width > sw) {
+              if (radio > 1) {
+                height = sh * scale;
+                width = height / radio;
+              } else {
+                width = sw * scale;
+                height = width * radio;
+              }
+            }
+          }
+          return [width,height];
+      }
+    function createImgEventFullScreen() {
+      var imgs = $(".content").find("img");
+      console.log(imgs);
+      for (var i = 0; i < imgs.length; i++) {
+        // $(imgs[i]).click(createCover(imgs[i]));
+        imgs[i].onclick = function(e) {
+          var src = e.srcElement.currentSrc;
+          createCover(src);
+        };
+      }
+     
+      function createCover(src) {
+        // 创建对象
+        var img = new Image();
+        // 改变图片的src
+        img.src = src;
+        // 判断是否有缓存
+        if (img.complete) {
+          // 打印
+          var wh = calculateWH(img.width,img.height);
+          createCoverWithWidth(wh[0], wh[1], src);
+        } else {
+          // 加载完成执行
+          img.onload = function() {
+            var wh = calculateWH(img.width,img.height);
+            createCoverWithWidth(img.width, img.height, src);
+          };
+        }
+      }
+      
+      function createCoverWithWidth(width, height, src) {
+        var cover = $(
+          "<div id='fullScreenCover' class='zhao-cover-img-container'><img id='cover-img' w='"+width+"' h='"+height+"' class='zhao-cover-img' src='" +
+            src +
+            "' style='width:" +
+            width +
+            "px;height:'" +
+            height +
+            "px'/></div>"
+        );
+        $("#fullScreenCover").remove();
+        $("body").append(cover);
+        $("body").addClass("zhao-no-scroll");
+        $("#fullScreenCover").click(function() {
+          $("#fullScreenCover").remove();
+          $("body").removeClass("zhao-no-scroll");
+        });
+      }
+    }
+    function autoAjustCover() {
+      if ($("#cover-img").length > 0) {
+        var img = $("#cover-img")[0];
+        var wh = calculateWH(img.getAttribute("w"),img.getAttribute("h"));
+        img.style.width = wh[0]+"px";
+        img.style.height = wh[1]+"px";
+      }
+      ajustToc();
+     
+    }
+
+    function ajustToc(){
+      var sw = $(window).width();
+      var content = $(".content").width();
+      var padding = (sw-content)/2;
+      var currentLeft = parseInt($(".js-toc")[0].style.left,10);
+      var left = 0;
+      var width = 180;
+      if(padding<400){
+        left = padding - 200;
+        width = 180;
+      }else if(padding<600){
+        left = 200;
+        width = padding - left-100;
+        if(width<180) width = 180;
+      }else{
+        left = padding - 400;
+        width = 300;
+      }
+      if(left<0){
+        $(".js-toc")[0].style.display = "none";
+      }else{
+        $(".js-toc")[0].style.display = "inline";
+        $(".js-toc")[0].style.left=left+"px";
+        $(".js-toc")[0].style.width = width+"px";
+      }
+    }
+    window.onresize = function() {
+      autoAjustCover();
+    };
+    setTimeout(function() {
+      createImgEventFullScreen();
+    }, 1000);
+  </script>
+</article>
+
+
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="/js/Valine.min.js"></script> 
+    <!-- <script src='//unpkg.com/valine/dist/Valine.min.js'></script> -->
+    <!-- && theme.disqus.enabled <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div> -->
+    <!-- <div id="lv-container" data-id="city" data-uid="MTAyMC80Mzg0OC8yMDM4Mw==">
+        <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+    
+           if (typeof LivereTower === 'function') { return; }
+    
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+    
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+        </script>
+    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div> -->
+    <div id="vcomments"></div>
+    <style>
+        .vinput{
+            color:white;
+        }
+        .vcode.vinput{
+            color:black
+        }
+        .v .vwrap .vheader .vinput{
+            border-bottom:1px solid #dedede
+        }
+    </style>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: '1xkWvBBcVNOuCSs7iYmxXv9d-gzGzoHsz',
+            appKey: 'czIcghVV8lSRBdPQa9UzaNXP',
+            verify:true,
+            placeholder:'Come on Baby!'
+        })
+       
+        
+    </script>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-先下载驱动"><span class="toc-number">1.</span> <span class="toc-text">1. 先下载驱动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-连接打印机"><span class="toc-number">2.</span> <span class="toc-text">2. 连接打印机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步"><span class="toc-number">2.1.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二步"><span class="toc-number">2.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三步"><span class="toc-number">2.3.</span> <span class="toc-text">第三步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第四步"><span class="toc-number">2.4.</span> <span class="toc-text">第四步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第五步"><span class="toc-number">2.5.</span> <span class="toc-text">第五步</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/posts/32c97101/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/posts/32c97101/&text=实验室如何连接M1005打印机"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/posts/32c97101/&title=实验室如何连接M1005打印机"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/posts/32c97101/&is_video=false&description=实验室如何连接M1005打印机"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=实验室如何连接M1005打印机&body=Check out this article: http://yoursite.com/posts/32c97101/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/posts/32c97101/&title=实验室如何连接M1005打印机"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/posts/32c97101/&title=实验室如何连接M1005打印机"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/posts/32c97101/&title=实验室如何连接M1005打印机"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/posts/32c97101/&title=实验室如何连接M1005打印机"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/posts/32c97101/&name=实验室如何连接M1005打印机&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+  <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+  <span class="post-meta-divider">|</span>
+  
+
+  <div class="footer-left">
+    Copyright &copy; 2019 liudaozhenjun
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+        <li>
+          <a href="/">Home</a>
+        </li>
+        
+        <li>
+          <a href="/about/">About</a>
+        </li>
+        
+        <li>
+          <a href="/archives/">Writing</a>
+        </li>
+        
+        <li>
+          <a href="/categories/">Categories</a>
+        </li>
+        
+        <li>
+          <a href="/tags/">Tags</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </div>
+
+  <style>
+    body {
+      max-width: 60rem !important;
+      font-size: 1rem !important;
+      font-weight: 500 !important;
+    }
+    .px3 {
+      padding-right: 3rem;
+      padding-left: 3rem;
+    }
+
+    .highlight {
+      background: black !important;
+    }
+    pre {
+      font-size: 0.9rem !important;
+    }
+    html {
+      border-top: 0px !important;
+    }
+    #header #nav {
+      font-size: 1rem;
+    }
+    .abtn {
+      width: 100%;
+      background: rgba(255, 255, 255, 0);
+      color: white;
+      text-align: left;
+      border: 0;
+      outline: none;
+      text-decoration: none;
+      font-size: 13px;
+      left: 2px;
+      display: inline-block;
+    }
+    .abtn:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .no-is-collapsed {
+      max-height: 1000px;
+    }
+    .js-toc-expanded {
+      max-height: 800px;
+      overflow-y: scroll;
+    }
+    .js-toc-expanded::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+
+  <script>
+    var isExpanded = false;
+    $(document).ready(function() {
+      if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+        $("body")[0].style.paddingLeft = "2rem";
+        $("body")[0].style.paddingRight = "2rem";
+       
+        //移动端
+        $("body")[0].style.maxWidth = "48rem!important";
+        if ($(".js-toc").length == 0) {
+          $("#bottom-placeholder")[0].style.height = "0px";
+        }else{
+          $("#bottom-placeholder")[0].style.height = "64px";
+        }
+      } else {
+        $("body")[0].style.maxWidth = "60%!important";
+        $("#bottom-placeholder")[0].style.height = "0px";
+      }
+      // if (document.documentElement.clientWidth <= 1250) {
+      //   document.getElementsByClassName("js-toc")[0].style.display = "none";
+      // } else {
+      //   var style = document.getElementsByClassName("js-toc")[0].style;
+      //   style.display = "inline";
+      //   if(document.documentElement.clientWidth>1400){
+      //       style.left = "5%"
+      //   }else{
+      //       style.left = "1%"
+      //   }
+      // }
+      if ($(".js-toc").length > 0) {
+        ajustToc(); //此函数在post.ejs
+        $(".js-toc").prepend(
+          "<div ><div style='display: inline-block;'><button class='abtn' onclick='toggleToc()'>展开</button></div><div style='display: inline-block;'><font style='font-size:13px;color:#2bbc8a'  id='tip'>1%<font></div></div>"
+        );
+        showScrollTip();
+        $(window).bind("scroll", function() {
+          showScrollTip();
+          // var liTop = $(".is-active-li").position().top;    
+          // var contentH = $(".js-toc").height();
+          // var clientH = 800;
+          // var scrolltop =0;
+          // if(liTop>800&&liTop<850){
+          //   scrolltop = 400;
+          // }else if(liTop>1200&&liTop<1250){
+          //   scrolltop = 800;
+          // }else if(liTop>1600&&liTop<1650){
+          //   scrolltop = 1200;
+          // }
+
+
+
+          
+          // if((liTop+800)>contentH){
+          //   scrolltop = contentH-800;
+          // }
+          // $(".js-toc").animate({scrollTop:scrolltop},300);   
+          // console.log($(".is-active-li").position().top);          
+        });
+      }
+    });
+    function showScrollTip(){
+      var top = $(this).scrollTop(); // 当前窗口的滚动距离
+          var contentY = $("article .content").offset().top;
+          var contentH = $("article .content").height();
+          var cw = $(window).height();
+          // console.log("cw:"+cw+",top:"+top+",contentY:"+contentY+",contentH:"+contentH);
+          var tip = parseInt((cw+top-contentY)/contentH*100);
+          if(tip>100) tip=100;
+          $("#tip").text(tip+"%");
+    }
+    function toggleToc() {
+      if (isExpanded) {
+        $(".no-is-collapsed").each(function(e) {
+          $(this).removeClass("no-is-collapsed");
+        });
+        $(".abtn").text("展开");
+        isExpanded = false;
+        $(".js-toc").each(function(e) {
+          $(this).removeClass("js-toc-expanded");
+        });
+      } else {
+        $(".is-collapsed").each(function(e) {
+          $(this).addClass("no-is-collapsed");
+        });
+        $(".abtn").text("自动");
+        $(".js-toc").each(function(e) {
+          $(this).addClass("js-toc-expanded");
+        });
+        isExpanded = true;
+      }
+    }
+  </script>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?acdcaa5a48f961d9125ca706ddde18e1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+<!-- Disqus Comments -->
+
+
+    <div id="bottom-placeholder" style="height:0px;"></div>
+</body>
+</html>

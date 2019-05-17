@@ -28,7 +28,6 @@ $(document).ready(function() {
     var menu = $("#menu");
     var nav = $("#menu > #nav");
     var menuIcon = $("#menu-icon, #menu-icon-tablet");
-
     /**
      * Display the menu on hi-res laptops and desktops.
      */
@@ -56,7 +55,7 @@ $(document).ready(function() {
      */
     if (menu.length) {
       $(window).on("scroll", function() {
-        var topDistance = menu.offset().top;
+        var topDistance = $(document).scrollTop();
 
         // hide only the navigation links on desktop
         if (!nav.is(":visible") && topDistance < 50) {
