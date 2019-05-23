@@ -17,7 +17,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190523171651.png">
 <meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190523171703.png">
-<meta property="og:updated_time" content="2019-05-23T10:16:52.200Z">
+<meta property="og:updated_time" content="2019-05-23T10:19:35.645Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python与Pycharm">
 <meta name="twitter:description" content="1 如何增加Pycharm的提示  参数名增加类型 声明函数的时候指定返回类型 用注释的方式指定成员变量的类型  123456class Counter:    name = None #type: list    age = 11def test(c: Counter)-&amp;gt;Counter:    return c  2 自动import 12https://blog.csdn.net/g">
@@ -135,7 +135,7 @@
       
         <time datetime="2019-05-23T08:26:56.000Z" itemprop="datePublished">2019-05-23</time>
         
-        (Updated: <time datetime="2019-05-23T10:16:52.200Z" itemprop="dateModified">2019-05-23</time>)
+        (Updated: <time datetime="2019-05-23T10:19:35.645Z" itemprop="dateModified">2019-05-23</time>)
         
       
     </div>
@@ -174,7 +174,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">按ctrl把鼠标放在方法上</span><br></pre></td></tr></table></figure>
 <h2 id="5-方法详情的文档书写"><a class="markdownIt-Anchor" href="#5-方法详情的文档书写"></a> 5. 方法详情的文档书写</h2>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test2</span><span class="params">(c)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    原路返回</span></span><br><span class="line"><span class="string">    :param c: 原路</span></span><br><span class="line"><span class="string">    :type c: Counter</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">return</span> c</span><br><span class="line"><span class="comment"># return类型 会自动推断</span></span><br></pre></td></tr></table></figure>
-<p>Python Debugger -&gt; Collect runtime information for code insight 打钩<br>
+<p><code>Python Debugger</code> -&gt; <code>Collect runtime information for code insight</code> 打钩<br>
 调试程序一遍后<br>
 再次在方法上插入文档就会自动导入<br>
 <img src="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190523171651.png" alt><br>
@@ -182,7 +182,14 @@
 <h2 id="6-获取字典dict中不存在的值时出错问题"><a class="markdownIt-Anchor" href="#6-获取字典dict中不存在的值时出错问题"></a> 6. 获取字典dict中不存在的值时出错问题</h2>
  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dict.get(<span class="string">"key"</span>,<span class="literal">None</span>) <span class="comment">#没有就返回None</span></span><br></pre></td></tr></table></figure>
 <h2 id="7-python中的多线程"><a class="markdownIt-Anchor" href="#7-python中的多线程"></a> 7. python中的多线程</h2>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">python3线程同步，Lock、Rlock、Condition、Event、timer、local</span><br><span class="line">https://www.cnblogs.com/tkqasn/p/5700281.html</span><br><span class="line">https://www.jianshu.com/p/191be5f10a94</span><br><span class="line"></span><br><span class="line">多线程中的 Queue队列中join()与task_done() ,</span><br><span class="line">http://www.cnblogs.com/dahuag/p/9198618.html</span><br></pre></td></tr></table></figure>
+<p>python3线程同步，Lock、Rlock、Condition、Event、timer、local</p>
+<pre><code>https://www.cnblogs.com/tkqasn/p/5700281.html
+https://www.jianshu.com/p/191be5f10a94
+</code></pre>
+<p>多线程中的 Queue队列中join()与task_done()</p>
+<pre><code>http://www.cnblogs.com/dahuag/p/9198618.html
+</code></pre>
+
   </div>
   <!-- <div class="js-toc"></div> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/css/tocbot.css"><style>
