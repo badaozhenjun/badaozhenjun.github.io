@@ -7,20 +7,20 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
-    <meta name="description" content="pycharm  1.如何增加Pycharm的提示  参数名增加类型 声明函数的时候指定返回类型 用注释的方式指定成员变量的类型  class Counter:    name = None #type: list    age = 11def test(c: Counter)-&amp;gt;Counter:    return c  2.自动import 《关于pycharm自动导入包快捷设置》 h">
+    <meta name="description" content="pycharm  1.如何增加Pycharm的提示  参数名增加类型 声明函数的时候指定返回类型 用注释的方式指定成员变量的类型  class Counter:    name = None #type: list    age = 11def test(c: Counter)-&amp;gt;Counter:    return c  2.自动import 《关于pycharm自动导入包快捷设置》 注">
 <meta name="keywords" content="ios,物联网,人工智能,网络安全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python与Pycharm">
 <meta property="og:url" content="http://yoursite.com/posts/6878adf7/index.html">
 <meta property="og:site_name" content="八道真君">
-<meta property="og:description" content="pycharm  1.如何增加Pycharm的提示  参数名增加类型 声明函数的时候指定返回类型 用注释的方式指定成员变量的类型  class Counter:    name = None #type: list    age = 11def test(c: Counter)-&amp;gt;Counter:    return c  2.自动import 《关于pycharm自动导入包快捷设置》 h">
+<meta property="og:description" content="pycharm  1.如何增加Pycharm的提示  参数名增加类型 声明函数的时候指定返回类型 用注释的方式指定成员变量的类型  class Counter:    name = None #type: list    age = 11def test(c: Counter)-&amp;gt;Counter:    return c  2.自动import 《关于pycharm自动导入包快捷设置》 注">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190523171651.png">
 <meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190523171703.png">
-<meta property="og:updated_time" content="2019-05-28T14:04:34.566Z">
+<meta property="og:updated_time" content="2019-06-04T07:10:26.080Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python与Pycharm">
-<meta name="twitter:description" content="pycharm  1.如何增加Pycharm的提示  参数名增加类型 声明函数的时候指定返回类型 用注释的方式指定成员变量的类型  class Counter:    name = None #type: list    age = 11def test(c: Counter)-&amp;gt;Counter:    return c  2.自动import 《关于pycharm自动导入包快捷设置》 h">
+<meta name="twitter:description" content="pycharm  1.如何增加Pycharm的提示  参数名增加类型 声明函数的时候指定返回类型 用注释的方式指定成员变量的类型  class Counter:    name = None #type: list    age = 11def test(c: Counter)-&amp;gt;Counter:    return c  2.自动import 《关于pycharm自动导入包快捷设置》 注">
 <meta name="twitter:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190523171651.png">
     
     
@@ -137,7 +137,7 @@
       
         <time datetime="2019-05-23T08:26:56.000Z" itemprop="datePublished">2019-05-23</time>
         
-        (Updated: <time datetime="2019-05-28T14:04:34.566Z" itemprop="dateModified">2019-05-28</time>)
+        (Updated: <time datetime="2019-06-04T07:10:26.080Z" itemprop="dateModified">2019-06-04</time>)
         
       
     </div>
@@ -170,8 +170,7 @@
 </ol>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Counter</span>:</span></span><br><span class="line">    name = <span class="literal">None</span> <span class="comment">#type: list</span></span><br><span class="line">    age = <span class="number">11</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span><span class="params">(c: Counter)</span>-&gt;Counter:</span></span><br><span class="line">    <span class="keyword">return</span> c</span><br></pre></td></tr></table></figure>
 <h3 id="2自动import"><a class="markdownIt-Anchor" href="#2自动import"></a> 2.自动import</h3>
-<p>《关于pycharm自动导入包快捷设置》<br>
-<a href="https://blog.csdn.net/gaopeng0071/article/details/79402399" target="_blank" rel="noopener">https://blog.csdn.net/gaopeng0071/article/details/79402399</a><br>
+<p><a href="https://blog.csdn.net/gaopeng0071/article/details/79402399" target="_blank" rel="noopener">《关于pycharm自动导入包快捷设置》</a><br>
 注意是按两次1</p>
 <h3 id="3获取对象的属性和方法"><a class="markdownIt-Anchor" href="#3获取对象的属性和方法"></a> 3.获取对象的属性和方法</h3>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dir(Object)</span><br></pre></td></tr></table></figure>
@@ -188,51 +187,38 @@
 <h3 id="1获取字典dict中不存在的值时出错问题"><a class="markdownIt-Anchor" href="#1获取字典dict中不存在的值时出错问题"></a> 1.获取字典dict中不存在的值时出错问题</h3>
  <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dict.get(<span class="string">"key"</span>,<span class="literal">None</span>) <span class="comment">#没有就返回None</span></span><br></pre></td></tr></table></figure>
 <h3 id="2python中的多线程"><a class="markdownIt-Anchor" href="#2python中的多线程"></a> 2.python中的多线程</h3>
-<p>python3线程同步，Lock、Rlock、Condition、Event、timer、local<br>
-《threading多线程总结》<br>
-<a href="https://www.cnblogs.com/tkqasn/p/5700281.html" target="_blank" rel="noopener">https://www.cnblogs.com/tkqasn/p/5700281.html</a></p>
-<p>《python3线程同步，Lock、Rlock、Condition方式》<br>
-<a href="https://www.jianshu.com/p/191be5f10a94" target="_blank" rel="noopener">https://www.jianshu.com/p/191be5f10a94</a></p>
-<p>《多线程中的 Queue队列中join()与task_done()》<br>
-<a href="http://www.cnblogs.com/dahuag/p/9198618.html" target="_blank" rel="noopener">http://www.cnblogs.com/dahuag/p/9198618.html</a></p>
+<p>python3线程同步，Lock、Rlock、Condition、Event、timer、local</p>
+<p><a href="https://www.cnblogs.com/tkqasn/p/5700281.html" target="_blank" rel="noopener">《threading多线程总结》</a></p>
+<p><a href="https://www.jianshu.com/p/191be5f10a94" target="_blank" rel="noopener">《python3线程同步，Lock、Rlock、Condition方式》</a></p>
+<p><a href="http://www.cnblogs.com/dahuag/p/9198618.html" target="_blank" rel="noopener"> 《多线程中的 Queue队列中join()与task_done()》 </a></p>
 <h3 id="3python中的多进程"><a class="markdownIt-Anchor" href="#3python中的多进程"></a> 3.python中的多进程</h3>
 <p>基本和多线程差不多，但是有一个管道的概念，类似tcp那种收发信息，可以让两个进程进行通信<br>
-《Python多进程编程》<br>
-<a href="https://www.cnblogs.com/kaituorensheng/p/4445418.html" target="_blank" rel="noopener">https://www.cnblogs.com/kaituorensheng/p/4445418.html</a></p>
+<a href="https://www.cnblogs.com/kaituorensheng/p/4445418.html" target="_blank" rel="noopener">《Python多进程编程》</a></p>
 <h3 id="4python换源"><a class="markdownIt-Anchor" href="#4python换源"></a> 4.python换源</h3>
 <h4 id="临时使用"><a class="markdownIt-Anchor" href="#临时使用"></a> 临时使用</h4>
-<p>可以在使用pip的时候加参数-i <a href="https://pypi.tuna.tsinghua.edu.cn/simple" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple</a><br>
-例如：pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple</a> gevent，这样就会从清华这边的镜像去安装gevent库。</p>
+<p>可以在使用pip的时候加参数<code>-i https://pypi.tuna.tsinghua.edu.cn/simple</code></p>
+<p>例如：<code>pip install -i https://pypi.tuna.tsinghua.edu.cn/simple gevent</code>，这样就会从清华这边的镜像去安装gevent库。</p>
 <h4 id="永久修改"><a class="markdownIt-Anchor" href="#永久修改"></a> 永久修改</h4>
 <p>Linux下，修改 <code>~/.pip/pip.conf</code> (没有就创建一个)， 修改 index-url至tuna，内容如下：</p>
  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
 <p>windows下，直接在user目录中创建一个pip目录，如：<code>C:\Users\xx\pip</code>，新建文件pip.ini，内容如下</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
 <h3 id="5pyqt5"><a class="markdownIt-Anchor" href="#5pyqt5"></a> 5.pyqt5</h3>
-<p>《从零开始 使用PyQt5》<br>
-<a href="https://blog.csdn.net/qq_41377419/article/details/82379818" target="_blank" rel="noopener">https://blog.csdn.net/qq_41377419/article/details/82379818</a></p>
-<p>《关于QTcreator总是卡死无响应解决办法》<br>
-<a href="https://blog.csdn.net/weixin_38226671/article/details/87351062" target="_blank" rel="noopener">https://blog.csdn.net/weixin_38226671/article/details/87351062</a><br>
-换了个pyqt-tools的版本 终于不卡死了</p>
-<p>《pyqt教程》<br>
-<a href="http://code.py40.com/pyqt5/18.html" target="_blank" rel="noopener">http://code.py40.com/pyqt5/18.html</a></p>
+<p><a href="https://blog.csdn.net/qq_41377419/article/details/82379818" target="_blank" rel="noopener">《从零开始 使用PyQt5》</a></p>
+<p><a href="https://blog.csdn.net/weixin_38226671/article/details/87351062" target="_blank" rel="noopener">《关于QTcreator总是卡死无响应解决办法》</a></p>
+<p>换了个pyqt-tools的版本 终于不卡死了</p>
+<p><a href="http://code.py40.com/pyqt5/18.html" target="_blank" rel="noopener">《pyqt教程》</a></p>
 <p>信号可以有不同数量的参数，参数可以为任何类型。在一个类中，可以存在信号名相同，但参数不同的多个信号。这时的调用方式为在信号之后加方括号（[ ]） ,方括号内为接收到的数据类型。可以采用类型符号或该类型的英文字符串。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">blueb.clicked[bool].connect(self.setColor)</span><br></pre></td></tr></table></figure>
-<p>《使用QTThread的正确方式》<br>
-<a href="https://blog.csdn.net/qq_39607437/article/details/79213717" target="_blank" rel="noopener">https://blog.csdn.net/qq_39607437/article/details/79213717</a></p>
-<p>《系统托盘的一个例子》<br>
-<a href="https://github.com/shenbo/runcat-pyqt5-win" target="_blank" rel="noopener">https://github.com/shenbo/runcat-pyqt5-win</a></p>
+<p><a href="https://blog.csdn.net/qq_39607437/article/details/79213717" target="_blank" rel="noopener">《使用QTThread的正确方式》</a></p>
+<p><a href="https://github.com/shenbo/runcat-pyqt5-win" target="_blank" rel="noopener">《系统托盘的一个例子》</a></p>
 <h3 id="6pyinstaller"><a class="markdownIt-Anchor" href="#6pyinstaller"></a> 6.pyinstaller</h3>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install pyinstaller</span><br><span class="line">pyinstaller -F -w myscript.py  #</span><br></pre></td></tr></table></figure>
-<p>《Python打包工具Pyinstaller实战指南》<br>
-<a href="https://www.jianshu.com/p/5d1da5b437b7" target="_blank" rel="noopener">https://www.jianshu.com/p/5d1da5b437b7</a><br>
-《pyinstaller各种参数意思》<br>
-<a href="https://blog.csdn.net/weixin_39000819/article/details/80942423" target="_blank" rel="noopener">https://blog.csdn.net/weixin_39000819/article/details/80942423</a></p>
-<p><a href="https://www.landui.com/help/show-3768.html" target="_blank" rel="noopener">https://www.landui.com/help/show-3768.html</a><br>
-PyInstaller将python脚本转成exe执行档，图标更换不了！！<br>
-<a href="https://www.oschina.net/question/941819_161672" target="_blank" rel="noopener">https://www.oschina.net/question/941819_161672</a><br>
-Pyinstaller打包问题之解决方案汇总<br>
-<a href="https://blog.csdn.net/La_vie_est_belle/article/details/82260339" target="_blank" rel="noopener">https://blog.csdn.net/La_vie_est_belle/article/details/82260339</a></p>
+<p><a href="https://www.jianshu.com/p/5d1da5b437b7" target="_blank" rel="noopener">《Python打包工具Pyinstaller实战指南》</a></p>
+<p><a href="https://blog.csdn.net/weixin_39000819/article/details/80942423" target="_blank" rel="noopener">《pyinstaller各种参数意思》</a></p>
+<p><a href="https://www.landui.com/help/show-3768.html" target="_blank" rel="noopener">《pyinstaller简洁教程spec》</a></p>
+<p><a href="https://www.oschina.net/question/941819_161672" target="_blank" rel="noopener">《PyInstaller将python脚本转成exe执行档，图标更换不了！！》</a></p>
+<p><a href="https://blog.csdn.net/La_vie_est_belle/article/details/82260339" target="_blank" rel="noopener">《Pyinstaller打包问题之解决方案汇总》</a></p>
 <h3 id="7python中的高级函数"><a class="markdownIt-Anchor" href="#7python中的高级函数"></a> 7.python中的高级函数</h3>
 <p>zip()<br>
 map()<br>
