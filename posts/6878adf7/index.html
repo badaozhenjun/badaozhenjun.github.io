@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=en>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190523171651.png">
 <meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190523171703.png">
-<meta property="og:updated_time" content="2019-06-04T07:10:26.080Z">
+<meta property="og:updated_time" content="2019-08-22T02:21:17.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python与Pycharm">
 <meta name="twitter:description" content="pycharm  1.如何增加Pycharm的提示  参数名增加类型 声明函数的时候指定返回类型 用注释的方式指定成员变量的类型  class Counter:    name = None #type: list    age = 11def test(c: Counter)-&amp;gt;Counter:    return c  2.自动import 《关于pycharm自动导入包快捷设置》 注">
@@ -76,14 +76,14 @@
         
       </ul>
     </span>
-    <br>
+    <br/>
     <span id="actions">
       <ul>
         
         <li><a class="icon" href="/posts/9af29de5/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
-        <li><a class="icon" href="/posts/3ce713f9/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" href="/posts/32c97101/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -93,7 +93,7 @@
       <span id="i-top" class="info" style="display:none;">Back to top</span>
       <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
-    <br>
+    <br/>
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/posts/6878adf7/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
@@ -129,15 +129,22 @@
 
 
     <div class="meta">
-      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">八道真君</span>
+      <span
+        class="author"
+        itemprop="author"
+        itemscope
+        itemtype="http://schema.org/Person"
+      >
+        <span itemprop="name"
+          >八道真君</span
+        >
       </span>
       
     <div class="postdate">
       
         <time datetime="2019-05-23T08:26:56.000Z" itemprop="datePublished">2019-05-23</time>
         
-        (Updated: <time datetime="2019-06-04T07:10:26.080Z" itemprop="dateModified">2019-06-04</time>)
+        (Updated: <time datetime="2019-08-22T02:21:17.061Z" itemprop="dateModified">2019-08-22</time>)
         
       
     </div>
@@ -203,6 +210,8 @@
  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
 <p>windows下，直接在user目录中创建一个pip目录，如：<code>C:\Users\xx\pip</code>，新建文件pip.ini，内容如下</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
+<p>或者直接使用命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
 <h3 id="5pyqt5"><a class="markdownIt-Anchor" href="#5pyqt5"></a> 5.pyqt5</h3>
 <p><a href="https://blog.csdn.net/qq_41377419/article/details/82379818" target="_blank" rel="noopener">《从零开始 使用PyQt5》</a></p>
 <p><a href="https://blog.csdn.net/weixin_38226671/article/details/87351062" target="_blank" rel="noopener">《关于QTcreator总是卡死无响应解决办法》</a></p>
@@ -226,6 +235,11 @@ filter()<br>
 reduce()</p>
 
   </div>
+  <script>
+    var contentNode = document.getElementsByClassName("content")[1]
+    contentNode.innerHTML = contentNode.innerHTML.replace(/\(#(.*?)#\)/g, "<font class=\"cloze\">$1</font>")
+     contentNode.innerHTML = contentNode.innerHTML.replace(/(<p>)?\[#(.*?)#\](<\/p>)?/g, "")
+  </script>
   <!-- <div class="js-toc"></div> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/css/tocbot.css"><style>
     .js-toc {
@@ -298,6 +312,8 @@ reduce()</p>
     }
   </style>
   <script> //点击放大相关
+
+   
      function calculateWH(imgWidth,imgHeight){
         var sw = $(window).width();
         var sh = $(window).height();
@@ -388,12 +404,12 @@ reduce()</p>
       var left = 0;
       var width = 180;
       if(padding<400){
-        left = padding - 200;
-        width = 180;
+        left = padding - 180-80;
+        width = 200;
       }else if(padding<600){
-        left = 200;
-        width = padding - left-100;
-        if(width<180) width = 180;
+        left = 140;
+        width = padding - left-80;
+        if(width<200) width = 200;
       }else{
         left = padding - 400;
         width = 300;
@@ -401,6 +417,7 @@ reduce()</p>
       if(left<0){
         $(".js-toc")[0].style.display = "none";
       }else{
+
         $(".js-toc")[0].style.display = "inline";
         $(".js-toc")[0].style.left=left+"px";
         $(".js-toc")[0].style.width = width+"px";
@@ -412,6 +429,9 @@ reduce()</p>
     setTimeout(function() {
       createImgEventFullScreen();
     }, 1000);
+    
+    //  contentNode.innerHTML = contentNode.innerHTML.replace(/\(#(.*?)#\)/g, "<font class=\"cloze\">$1</font>")
+    //  contentNode.innerHTML = contentNode.innerHTML.replace(/(<p>)?\[#(.*?)#\](<\/p>)?/g, "")
   </script>
 </article>
 
@@ -433,7 +453,7 @@ reduce()</p>
     </style>
     <div style="height:90px;">
             <h2 style="text-align: left;margin-bottom: 0px">精彩评论</h2>
-                    <hr style="height:1px;border:none;border-top:1px solid #555555;margin-top: 8px;">
+                    <hr  style="height:1px;border:none;border-top:1px solid #555555;margin-top: 8px;"/>
     </div>
     
     <div style="position:relative">
@@ -538,11 +558,18 @@ reduce()</p>
         
         <footer id="footer">
   
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script
+    async
+    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+  ></script>
 
-  <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+  <span id="busuanzi_container_site_pv"
+    >总访问量<span id="busuanzi_value_site_pv"></span>次</span
+  >
   <span class="post-meta-divider">|</span>
-  <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+  <span id="busuanzi_container_site_uv"
+    >总访客<span id="busuanzi_value_site_uv"></span>人</span
+  >
   <span class="post-meta-divider">|</span>
   
 
@@ -554,23 +581,33 @@ reduce()</p>
       <ul>
         
         <li>
-          <a href="/">Home</a>
+          <a href="/"
+            >Home</a
+          >
         </li>
         
         <li>
-          <a href="/about/">About</a>
+          <a href="/about/"
+            >About</a
+          >
         </li>
         
         <li>
-          <a href="/archives/">Writing</a>
+          <a href="/archives/"
+            >Writing</a
+          >
         </li>
         
         <li>
-          <a href="/categories/">Categories</a>
+          <a href="/categories/"
+            >Categories</a
+          >
         </li>
         
         <li>
-          <a href="/tags/">Tags</a>
+          <a href="/tags/"
+            >Tags</a
+          >
         </li>
         
       </ul>
@@ -624,7 +661,6 @@ reduce()</p>
       font-size: 1rem;
     }
     .abtn {
-      width: 100%;
       background: rgba(255, 255, 255, 0);
       color: white;
       text-align: left;
@@ -654,6 +690,7 @@ reduce()</p>
 
   <script>
     var isExpanded = false;
+    var isShow = true;
     $(document).ready(function() {
       if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
         $("body")[0].style.paddingLeft = "2rem";
@@ -681,12 +718,14 @@ reduce()</p>
       //       style.left = "1%"
       //   }
       // }
+   
       if ($(".js-toc").length > 0) {
         ajustToc(); //此函数在post.ejs
         $(".js-toc").prepend(
-          "<div ><div style='display: inline-block;'><button class='abtn' onclick='toggleToc()'>展开</button></div><div style='display: inline-block;'><font style='font-size:13px;color:#2bbc8a'  id='tip'>1%<font></div></div>"
+          "<div ><div style='display: inline-block;'><button class='abtn' id='show' onclick='toggleTocShow()'>显示目录</button><button class='abtn' id='expand' onclick='toggleToc()'>展开</button></div><div style='display: inline-block;'><font style='font-size:13px;color:#2bbc8a'  id='tip'>1%<font></div></div>"
         );
         showScrollTip();
+        toggleTocShow();
         $(window).bind("scroll", function() {
           showScrollTip();
           // var liTop = $(".is-active-li").position().top;    
@@ -710,6 +749,7 @@ reduce()</p>
           // $(".js-toc").animate({scrollTop:scrolltop},300);   
           // console.log($(".is-active-li").position().top);          
         });
+        
       }
     });
     function showScrollTip(){
@@ -727,7 +767,7 @@ reduce()</p>
         $(".no-is-collapsed").each(function(e) {
           $(this).removeClass("no-is-collapsed");
         });
-        $(".abtn").text("展开");
+        $("#expand").text("展开");
         isExpanded = false;
         $(".js-toc").each(function(e) {
           $(this).removeClass("js-toc-expanded");
@@ -736,12 +776,24 @@ reduce()</p>
         $(".is-collapsed").each(function(e) {
           $(this).addClass("no-is-collapsed");
         });
-        $(".abtn").text("自动");
+        $("#expand").text("自动");
         $(".js-toc").each(function(e) {
           $(this).addClass("js-toc-expanded");
         });
         isExpanded = true;
       }
+    }
+    function toggleTocShow(){
+       if(isShow){
+          $(".toc-list:first").hide();
+          $("#show").text("显示目录");
+          $("#expand").hide();
+       }else{
+         $("#expand").show();
+         $(".toc-list:first").show();
+         $("#show").text("隐藏目录");
+       }
+       isShow =! isShow;
     }
   </script>
 </footer>

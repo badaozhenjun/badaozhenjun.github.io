@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=en>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="八道真君">
 <meta property="og:description" content="2019.5.30  1.mitmdump设置代理无效？ 设置代理的方式 def request(flow):    client_ip = flow.client_conn.address.host    if client_ip == &apos;192.168.0.10&apos;:        proxy = (&apos;1.2.3.4&apos;, 8080)    else:        proxy = (&apos;3.4.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-31T02:59:19.474Z">
+<meta property="og:updated_time" content="2019-08-22T02:20:34.957Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一周">
 <meta name="twitter:description" content="2019.5.30  1.mitmdump设置代理无效？ 设置代理的方式 def request(flow):    client_ip = flow.client_conn.address.host    if client_ip == &apos;192.168.0.10&apos;:        proxy = (&apos;1.2.3.4&apos;, 8080)    else:        proxy = (&apos;3.4.">
@@ -73,7 +73,7 @@
         
       </ul>
     </span>
-    <br>
+    <br/>
     <span id="actions">
       <ul>
         
@@ -90,7 +90,7 @@
       <span id="i-top" class="info" style="display:none;">Back to top</span>
       <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
-    <br>
+    <br/>
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/posts/9af29de5/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
@@ -126,15 +126,22 @@
 
 
     <div class="meta">
-      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">八道真君</span>
+      <span
+        class="author"
+        itemprop="author"
+        itemscope
+        itemtype="http://schema.org/Person"
+      >
+        <span itemprop="name"
+          >八道真君</span
+        >
       </span>
       
     <div class="postdate">
       
         <time datetime="2019-05-30T12:15:09.000Z" itemprop="datePublished">2019-05-30</time>
         
-        (Updated: <time datetime="2019-05-31T02:59:19.474Z" itemprop="dateModified">2019-05-31</time>)
+        (Updated: <time datetime="2019-08-22T02:20:34.957Z" itemprop="dateModified">2019-08-22</time>)
         
       
     </div>
@@ -177,6 +184,11 @@
 <h3 id="7hackrequests的使用demo"><a class="markdownIt-Anchor" href="#7hackrequests的使用demo"></a> 7.HackRequests的使用demo</h3>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> HackRequests</span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">import</span> sys,io</span><br><span class="line">logging.basicConfig(level = logging.INFO,format = <span class="string">'%(asctime)s - %(name)s - %(levelname)s - %(message)s'</span>)</span><br><span class="line">logger = logging.getLogger(__name__)</span><br><span class="line">hack = HackRequests.hackRequests()</span><br><span class="line">raw_request = <span class="string">"""</span></span><br><span class="line"><span class="string">GET / HTTP/1.1</span></span><br><span class="line"><span class="string">Host: www.baidu.com</span></span><br><span class="line"><span class="string">Connection: close</span></span><br><span class="line"><span class="string">Cache-Control: max-age=0</span></span><br><span class="line"><span class="string">Upgrade-Insecure-Requests: 1</span></span><br><span class="line"><span class="string">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36</span></span><br><span class="line"><span class="string">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</span></span><br><span class="line"><span class="string">Accept-Language: zh-CN,zh;q=0.9</span></span><br><span class="line"><span class="string">Cookie: BAIDUID=711B1DCF857CA4831864A74B2444D3C2:FG=1; BIDUPSID=711B1DCF857CA4831864A74B2444D3C2; PSTM=1539174435; MCITY=-132%3A131%3A; BD_UPN=12314753; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; BDUSS=kQ3dG4xQUhQWGFrcnNVd2x5UTNkbW5kNFo1eVNvVXpZcUhKUW0tUHB2dXotUkpkSVFBQUFBJCQAAAAAAAAAAAEAAAC0BOQPvfBfyqVfzL4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALNs61yzbOtca; COOKIE_SESSION=62_0_9_2_9_8_1_0_9_4_4_0_0_0_6_0_1559202712_0_1559202768%7C9%2346_6_1558499882%7C3; H_PS_645EC=a65bFq%2F5s3kHAuscXKDeCUI7Wn3%2BEkXP2jpxNdc6daaljTGOq1Mmz4xNyLARJPFs74WS; BD_HOME=1; H_PS_PSSID=1450_28938_21086_18560_29064_28519_29098_29139_28834_28584_29071_22160; sugstore=1</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">hh = hack.httpraw(raw_request,proxy=(<span class="string">"127.0.0.1"</span>,<span class="string">'8081'</span>),ssl=<span class="literal">True</span>)</span><br><span class="line">sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding=<span class="string">'utf-8'</span>)</span><br><span class="line">print(hh.text())</span><br></pre></td></tr></table></figure>
   </div>
+  <script>
+    var contentNode = document.getElementsByClassName("content")[1]
+    contentNode.innerHTML = contentNode.innerHTML.replace(/\(#(.*?)#\)/g, "<font class=\"cloze\">$1</font>")
+     contentNode.innerHTML = contentNode.innerHTML.replace(/(<p>)?\[#(.*?)#\](<\/p>)?/g, "")
+  </script>
   <!-- <div class="js-toc"></div> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/css/tocbot.css"><style>
     .js-toc {
@@ -249,6 +261,8 @@
     }
   </style>
   <script> //点击放大相关
+
+   
      function calculateWH(imgWidth,imgHeight){
         var sw = $(window).width();
         var sh = $(window).height();
@@ -339,12 +353,12 @@
       var left = 0;
       var width = 180;
       if(padding<400){
-        left = padding - 200;
-        width = 180;
+        left = padding - 180-80;
+        width = 200;
       }else if(padding<600){
-        left = 200;
-        width = padding - left-100;
-        if(width<180) width = 180;
+        left = 140;
+        width = padding - left-80;
+        if(width<200) width = 200;
       }else{
         left = padding - 400;
         width = 300;
@@ -352,6 +366,7 @@
       if(left<0){
         $(".js-toc")[0].style.display = "none";
       }else{
+
         $(".js-toc")[0].style.display = "inline";
         $(".js-toc")[0].style.left=left+"px";
         $(".js-toc")[0].style.width = width+"px";
@@ -363,6 +378,9 @@
     setTimeout(function() {
       createImgEventFullScreen();
     }, 1000);
+    
+    //  contentNode.innerHTML = contentNode.innerHTML.replace(/\(#(.*?)#\)/g, "<font class=\"cloze\">$1</font>")
+    //  contentNode.innerHTML = contentNode.innerHTML.replace(/(<p>)?\[#(.*?)#\](<\/p>)?/g, "")
   </script>
 </article>
 
@@ -384,7 +402,7 @@
     </style>
     <div style="height:90px;">
             <h2 style="text-align: left;margin-bottom: 0px">精彩评论</h2>
-                    <hr style="height:1px;border:none;border-top:1px solid #555555;margin-top: 8px;">
+                    <hr  style="height:1px;border:none;border-top:1px solid #555555;margin-top: 8px;"/>
     </div>
     
     <div style="position:relative">
@@ -489,11 +507,18 @@
         
         <footer id="footer">
   
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script
+    async
+    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+  ></script>
 
-  <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+  <span id="busuanzi_container_site_pv"
+    >总访问量<span id="busuanzi_value_site_pv"></span>次</span
+  >
   <span class="post-meta-divider">|</span>
-  <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+  <span id="busuanzi_container_site_uv"
+    >总访客<span id="busuanzi_value_site_uv"></span>人</span
+  >
   <span class="post-meta-divider">|</span>
   
 
@@ -505,23 +530,33 @@
       <ul>
         
         <li>
-          <a href="/">Home</a>
+          <a href="/"
+            >Home</a
+          >
         </li>
         
         <li>
-          <a href="/about/">About</a>
+          <a href="/about/"
+            >About</a
+          >
         </li>
         
         <li>
-          <a href="/archives/">Writing</a>
+          <a href="/archives/"
+            >Writing</a
+          >
         </li>
         
         <li>
-          <a href="/categories/">Categories</a>
+          <a href="/categories/"
+            >Categories</a
+          >
         </li>
         
         <li>
-          <a href="/tags/">Tags</a>
+          <a href="/tags/"
+            >Tags</a
+          >
         </li>
         
       </ul>
@@ -575,7 +610,6 @@
       font-size: 1rem;
     }
     .abtn {
-      width: 100%;
       background: rgba(255, 255, 255, 0);
       color: white;
       text-align: left;
@@ -605,6 +639,7 @@
 
   <script>
     var isExpanded = false;
+    var isShow = true;
     $(document).ready(function() {
       if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
         $("body")[0].style.paddingLeft = "2rem";
@@ -632,12 +667,14 @@
       //       style.left = "1%"
       //   }
       // }
+   
       if ($(".js-toc").length > 0) {
         ajustToc(); //此函数在post.ejs
         $(".js-toc").prepend(
-          "<div ><div style='display: inline-block;'><button class='abtn' onclick='toggleToc()'>展开</button></div><div style='display: inline-block;'><font style='font-size:13px;color:#2bbc8a'  id='tip'>1%<font></div></div>"
+          "<div ><div style='display: inline-block;'><button class='abtn' id='show' onclick='toggleTocShow()'>显示目录</button><button class='abtn' id='expand' onclick='toggleToc()'>展开</button></div><div style='display: inline-block;'><font style='font-size:13px;color:#2bbc8a'  id='tip'>1%<font></div></div>"
         );
         showScrollTip();
+        toggleTocShow();
         $(window).bind("scroll", function() {
           showScrollTip();
           // var liTop = $(".is-active-li").position().top;    
@@ -661,6 +698,7 @@
           // $(".js-toc").animate({scrollTop:scrolltop},300);   
           // console.log($(".is-active-li").position().top);          
         });
+        
       }
     });
     function showScrollTip(){
@@ -678,7 +716,7 @@
         $(".no-is-collapsed").each(function(e) {
           $(this).removeClass("no-is-collapsed");
         });
-        $(".abtn").text("展开");
+        $("#expand").text("展开");
         isExpanded = false;
         $(".js-toc").each(function(e) {
           $(this).removeClass("js-toc-expanded");
@@ -687,12 +725,24 @@
         $(".is-collapsed").each(function(e) {
           $(this).addClass("no-is-collapsed");
         });
-        $(".abtn").text("自动");
+        $("#expand").text("自动");
         $(".js-toc").each(function(e) {
           $(this).addClass("js-toc-expanded");
         });
         isExpanded = true;
       }
+    }
+    function toggleTocShow(){
+       if(isShow){
+          $(".toc-list:first").hide();
+          $("#show").text("显示目录");
+          $("#expand").hide();
+       }else{
+         $("#expand").show();
+         $(".toc-list:first").show();
+         $("#show").text("隐藏目录");
+       }
+       isShow =! isShow;
     }
   </script>
 </footer>

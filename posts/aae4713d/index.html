@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=en>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="八道真君">
 <meta property="og:description" content="string与raw string的转换 字符串前面+r意思是告诉解释器生成字符串的时候原样生成字符串，一旦字符串生成，则无法再通过前面加r的方式实现  burp内容一样却获取不一样的结果 可以考虑ssl的问题，参看右上角target  python正则表达式替换 respose = HackRequests.httpraw(text,proxy= (&quot;127.0.0.1&quot;,&quot;8081&quot;),ss">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-06T11:06:59.117Z">
+<meta property="og:updated_time" content="2019-08-22T02:20:34.957Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第二周">
 <meta name="twitter:description" content="string与raw string的转换 字符串前面+r意思是告诉解释器生成字符串的时候原样生成字符串，一旦字符串生成，则无法再通过前面加r的方式实现  burp内容一样却获取不一样的结果 可以考虑ssl的问题，参看右上角target  python正则表达式替换 respose = HackRequests.httpraw(text,proxy= (&quot;127.0.0.1&quot;,&quot;8081&quot;),ss">
@@ -73,9 +73,11 @@
         
       </ul>
     </span>
-    <br>
+    <br/>
     <span id="actions">
       <ul>
+        
+        <li><a class="icon" href="/posts/4a1b6862/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
         <li><a class="icon" href="/posts/4509db9a/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
@@ -88,7 +90,7 @@
       <span id="i-top" class="info" style="display:none;">Back to top</span>
       <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
-    <br>
+    <br/>
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/posts/aae4713d/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
@@ -124,15 +126,22 @@
 
 
     <div class="meta">
-      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">八道真君</span>
+      <span
+        class="author"
+        itemprop="author"
+        itemscope
+        itemtype="http://schema.org/Person"
+      >
+        <span itemprop="name"
+          >八道真君</span
+        >
       </span>
       
     <div class="postdate">
       
         <time datetime="2019-06-05T02:47:31.000Z" itemprop="datePublished">2019-06-05</time>
         
-        (Updated: <time datetime="2019-06-06T11:06:59.117Z" itemprop="dateModified">2019-06-06</time>)
+        (Updated: <time datetime="2019-08-22T02:20:34.957Z" itemprop="dateModified">2019-08-22</time>)
         
       
     </div>
@@ -176,6 +185,11 @@
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span>  js2py</span><br><span class="line">context = js2py.EvalJs()</span><br><span class="line">context.execute(response.replace(<span class="string">"\n"</span>, <span class="string">""</span>))</span><br></pre></td></tr></table></figure>
 
   </div>
+  <script>
+    var contentNode = document.getElementsByClassName("content")[1]
+    contentNode.innerHTML = contentNode.innerHTML.replace(/\(#(.*?)#\)/g, "<font class=\"cloze\">$1</font>")
+     contentNode.innerHTML = contentNode.innerHTML.replace(/(<p>)?\[#(.*?)#\](<\/p>)?/g, "")
+  </script>
   <!-- <div class="js-toc"></div> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/css/tocbot.css"><style>
     .js-toc {
@@ -248,6 +262,8 @@
     }
   </style>
   <script> //点击放大相关
+
+   
      function calculateWH(imgWidth,imgHeight){
         var sw = $(window).width();
         var sh = $(window).height();
@@ -338,12 +354,12 @@
       var left = 0;
       var width = 180;
       if(padding<400){
-        left = padding - 200;
-        width = 180;
+        left = padding - 180-80;
+        width = 200;
       }else if(padding<600){
-        left = 200;
-        width = padding - left-100;
-        if(width<180) width = 180;
+        left = 140;
+        width = padding - left-80;
+        if(width<200) width = 200;
       }else{
         left = padding - 400;
         width = 300;
@@ -351,6 +367,7 @@
       if(left<0){
         $(".js-toc")[0].style.display = "none";
       }else{
+
         $(".js-toc")[0].style.display = "inline";
         $(".js-toc")[0].style.left=left+"px";
         $(".js-toc")[0].style.width = width+"px";
@@ -362,6 +379,9 @@
     setTimeout(function() {
       createImgEventFullScreen();
     }, 1000);
+    
+    //  contentNode.innerHTML = contentNode.innerHTML.replace(/\(#(.*?)#\)/g, "<font class=\"cloze\">$1</font>")
+    //  contentNode.innerHTML = contentNode.innerHTML.replace(/(<p>)?\[#(.*?)#\](<\/p>)?/g, "")
   </script>
 </article>
 
@@ -383,7 +403,7 @@
     </style>
     <div style="height:90px;">
             <h2 style="text-align: left;margin-bottom: 0px">精彩评论</h2>
-                    <hr style="height:1px;border:none;border-top:1px solid #555555;margin-top: 8px;">
+                    <hr  style="height:1px;border:none;border-top:1px solid #555555;margin-top: 8px;"/>
     </div>
     
     <div style="position:relative">
@@ -488,11 +508,18 @@
         
         <footer id="footer">
   
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script
+    async
+    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+  ></script>
 
-  <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+  <span id="busuanzi_container_site_pv"
+    >总访问量<span id="busuanzi_value_site_pv"></span>次</span
+  >
   <span class="post-meta-divider">|</span>
-  <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+  <span id="busuanzi_container_site_uv"
+    >总访客<span id="busuanzi_value_site_uv"></span>人</span
+  >
   <span class="post-meta-divider">|</span>
   
 
@@ -504,23 +531,33 @@
       <ul>
         
         <li>
-          <a href="/">Home</a>
+          <a href="/"
+            >Home</a
+          >
         </li>
         
         <li>
-          <a href="/about/">About</a>
+          <a href="/about/"
+            >About</a
+          >
         </li>
         
         <li>
-          <a href="/archives/">Writing</a>
+          <a href="/archives/"
+            >Writing</a
+          >
         </li>
         
         <li>
-          <a href="/categories/">Categories</a>
+          <a href="/categories/"
+            >Categories</a
+          >
         </li>
         
         <li>
-          <a href="/tags/">Tags</a>
+          <a href="/tags/"
+            >Tags</a
+          >
         </li>
         
       </ul>
@@ -574,7 +611,6 @@
       font-size: 1rem;
     }
     .abtn {
-      width: 100%;
       background: rgba(255, 255, 255, 0);
       color: white;
       text-align: left;
@@ -604,6 +640,7 @@
 
   <script>
     var isExpanded = false;
+    var isShow = true;
     $(document).ready(function() {
       if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
         $("body")[0].style.paddingLeft = "2rem";
@@ -631,12 +668,14 @@
       //       style.left = "1%"
       //   }
       // }
+   
       if ($(".js-toc").length > 0) {
         ajustToc(); //此函数在post.ejs
         $(".js-toc").prepend(
-          "<div ><div style='display: inline-block;'><button class='abtn' onclick='toggleToc()'>展开</button></div><div style='display: inline-block;'><font style='font-size:13px;color:#2bbc8a'  id='tip'>1%<font></div></div>"
+          "<div ><div style='display: inline-block;'><button class='abtn' id='show' onclick='toggleTocShow()'>显示目录</button><button class='abtn' id='expand' onclick='toggleToc()'>展开</button></div><div style='display: inline-block;'><font style='font-size:13px;color:#2bbc8a'  id='tip'>1%<font></div></div>"
         );
         showScrollTip();
+        toggleTocShow();
         $(window).bind("scroll", function() {
           showScrollTip();
           // var liTop = $(".is-active-li").position().top;    
@@ -660,6 +699,7 @@
           // $(".js-toc").animate({scrollTop:scrolltop},300);   
           // console.log($(".is-active-li").position().top);          
         });
+        
       }
     });
     function showScrollTip(){
@@ -677,7 +717,7 @@
         $(".no-is-collapsed").each(function(e) {
           $(this).removeClass("no-is-collapsed");
         });
-        $(".abtn").text("展开");
+        $("#expand").text("展开");
         isExpanded = false;
         $(".js-toc").each(function(e) {
           $(this).removeClass("js-toc-expanded");
@@ -686,12 +726,24 @@
         $(".is-collapsed").each(function(e) {
           $(this).addClass("no-is-collapsed");
         });
-        $(".abtn").text("自动");
+        $("#expand").text("自动");
         $(".js-toc").each(function(e) {
           $(this).addClass("js-toc-expanded");
         });
         isExpanded = true;
       }
+    }
+    function toggleTocShow(){
+       if(isShow){
+          $(".toc-list:first").hide();
+          $("#show").text("显示目录");
+          $("#expand").hide();
+       }else{
+         $("#expand").show();
+         $(".toc-list:first").show();
+         $("#show").text("隐藏目录");
+       }
+       isShow =! isShow;
     }
   </script>
 </footer>

@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
+    <meta name="description" content="[#docker#]  *1. 实现了博客对Anki的转换  在标题上，前面加*即为不计入anki 在标题上，后面加[#tag1,tag2#]通过这种方式设置生成anki的tag 在内容上, 通过(#answer#) 设置填空   docker 和镜像相关的命令  列出镜像 列出镜像: (#docker images #):       参数:          (#-a#)          列">
+<meta name="keywords" content="ios,物联网,人工智能,网络安全">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019.7.22-星期一">
+<meta property="og:url" content="http://yoursite.com/posts/4a1b6862/index.html">
+<meta property="og:site_name" content="八道真君">
+<meta property="og:description" content="[#docker#]  *1. 实现了博客对Anki的转换  在标题上，前面加*即为不计入anki 在标题上，后面加[#tag1,tag2#]通过这种方式设置生成anki的tag 在内容上, 通过(#answer#) 设置填空   docker 和镜像相关的命令  列出镜像 列出镜像: (#docker images #):       参数:          (#-a#)          列">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-22T02:29:52.196Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019.7.22-星期一">
+<meta name="twitter:description" content="[#docker#]  *1. 实现了博客对Anki的转换  在标题上，前面加*即为不计入anki 在标题上，后面加[#tag1,tag2#]通过这种方式设置生成anki的tag 在内容上, 通过(#answer#) 设置填空   docker 和镜像相关的命令  列出镜像 列出镜像: (#docker images #):       参数:          (#-a#)          列">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>2019.7.22-星期一</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+ 
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/posts/3d1c58f4/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/posts/aae4713d/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/posts/4a1b6862/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/posts/4a1b6862/&text=2019.7.22-星期一"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/posts/4a1b6862/&title=2019.7.22-星期一"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/posts/4a1b6862/&is_video=false&description=2019.7.22-星期一"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=2019.7.22-星期一&body=Check out this article: http://yoursite.com/posts/4a1b6862/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/posts/4a1b6862/&title=2019.7.22-星期一"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/posts/4a1b6862/&title=2019.7.22-星期一"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/posts/4a1b6862/&title=2019.7.22-星期一"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/posts/4a1b6862/&title=2019.7.22-星期一"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/posts/4a1b6862/&name=2019.7.22-星期一&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    <!-- <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-实现了博客对anki的转换"><span class="toc-number">1.</span> <span class="toc-text"> *1. 实现了博客对Anki的转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker-和镜像相关的命令"><span class="toc-number">2.</span> <span class="toc-text"> docker 和镜像相关的命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#列出镜像"><span class="toc-number">2.1.</span> <span class="toc-text"> 列出镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#搜索镜像"><span class="toc-number">2.2.</span> <span class="toc-text"> 搜索镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除镜像"><span class="toc-number">2.3.</span> <span class="toc-text"> 删除镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除全部镜像"><span class="toc-number">2.4.</span> <span class="toc-text"> 删除全部镜像</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker-和容器相关的命令"><span class="toc-number">3.</span> <span class="toc-text"> docker 和容器相关的命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#启动容器"><span class="toc-number">3.1.</span> <span class="toc-text"> 启动容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#列出所有容器"><span class="toc-number">3.2.</span> <span class="toc-text"> 列出所有容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#退出容器"><span class="toc-number">3.3.</span> <span class="toc-text"> 退出容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除已停止的容器"><span class="toc-number">3.4.</span> <span class="toc-text"> 删除已停止的容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#docker-查看容器相关命令"><span class="toc-number">3.5.</span> <span class="toc-text"> docker 查看容器相关命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker-操作容器"><span class="toc-number">4.</span> <span class="toc-text"> docker 操作容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker-操作数据卷"><span class="toc-number">5.</span> <span class="toc-text"> docker 操作数据卷</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#直接命令添加"><span class="toc-number">5.1.</span> <span class="toc-text"> 直接命令添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dockerfile添加"><span class="toc-number">5.2.</span> <span class="toc-text"> dockerfile添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据卷的传递"><span class="toc-number">5.3.</span> <span class="toc-text"> 数据卷的传递</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dockerfile相关指令"><span class="toc-number">6.</span> <span class="toc-text"> dockerfile相关指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git从仓库中删除已经被跟踪的文件git"><span class="toc-number">7.</span> <span class="toc-text"> git从仓库中删除已经被跟踪的文件[#git#]</span></a></li></ol>
+    </div> -->
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        2019.7.22-星期一
+    </h1>
+
+
+
+    <div class="meta">
+      <span
+        class="author"
+        itemprop="author"
+        itemscope
+        itemtype="http://schema.org/Person"
+      >
+        <span itemprop="name"
+          >八道真君</span
+        >
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-07-22T04:53:59.000Z" itemprop="datePublished">2019-07-22</time>
+        
+        (Updated: <time datetime="2019-08-22T02:29:52.196Z" itemprop="dateModified">2019-08-22</time>)
+        
+      
+    </div>
+
+ 
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/get√/">get√</a>
+    </div>
+
+ <style>
+        .tag-link::before{
+          color: #2bbc8a;
+          content: "#";
+        }
+      </style>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>[#docker#]</p>
+<h2 id="1-实现了博客对anki的转换"><a class="markdownIt-Anchor" href="#1-实现了博客对anki的转换"></a> *1. 实现了博客对Anki的转换</h2>
+<ul>
+<li>在标题上，前面加*即为不计入anki</li>
+<li>在标题上，后面加[#tag1,tag2#]通过这种方式设置生成anki的tag</li>
+<li>在内容上, 通过(#answer#) 设置填空</li>
+</ul>
+<h2 id="docker-和镜像相关的命令"><a class="markdownIt-Anchor" href="#docker-和镜像相关的命令"></a> docker 和镜像相关的命令</h2>
+<h3 id="列出镜像"><a class="markdownIt-Anchor" href="#列出镜像"></a> 列出镜像</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">列出镜像: (#docker images #): </span><br><span class="line">      参数:</span><br><span class="line">          (#-a#)          列出本地所有镜像，含中间镜像层</span><br><span class="line">          (#-q #)         只显示id</span><br><span class="line">          (#--no-trunc#)  不截断</span><br></pre></td></tr></table></figure>
+<h3 id="搜索镜像"><a class="markdownIt-Anchor" href="#搜索镜像"></a> 搜索镜像</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">搜索镜像: docker search</span><br><span class="line">      参数：</span><br><span class="line">          (#-s  30#)          设置点赞数超过30</span><br><span class="line">          (#--no-trunc#)      不截断</span><br></pre></td></tr></table></figure>
+<h3 id="删除镜像"><a class="markdownIt-Anchor" href="#删除镜像"></a> 删除镜像</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">删除镜像: (#docker rmi -f 镜像名字:TAG 镜像名字2:TAG2#)</span><br><span class="line">        这里的-f是指(#强制删除#)</span><br></pre></td></tr></table></figure>
+<h3 id="删除全部镜像"><a class="markdownIt-Anchor" href="#删除全部镜像"></a> 删除全部镜像</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">删除全部镜像:</span><br><span class="line">(#docker rmi -f $(docker images -q)#)</span><br></pre></td></tr></table></figure>
+<h2 id="docker-和容器相关的命令"><a class="markdownIt-Anchor" href="#docker-和容器相关的命令"></a> docker 和容器相关的命令</h2>
+<h3 id="启动容器"><a class="markdownIt-Anchor" href="#启动容器"></a> 启动容器</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">从镜像启动容器</span><br><span class="line"> docker run [options] image [command][arg...]</span><br><span class="line">        (#--name=&quot;newname&quot;#) 为容器指定一个名称</span><br><span class="line">        (#-d#)               后台运行容器,注意:(#容器需要一个守护进程#)</span><br><span class="line">        (#-it#)              交互式运行</span><br><span class="line">        (#-P#)               随机端口</span><br><span class="line">        (#-p#)               指定端口映射    hostPort:containerPort</span><br><span class="line">        (#-e#)               设置环境变量</span><br><span class="line">从容器启动容器:</span><br><span class="line">        (#docker start 容器id#)</span><br></pre></td></tr></table></figure>
+<h3 id="列出所有容器"><a class="markdownIt-Anchor" href="#列出所有容器"></a> 列出所有容器</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(#docker ps#)</span><br><span class="line">    (#-a#) 列出正在运行的和历史上运行的</span><br><span class="line">    (#-l#) 列出上一个容器</span><br><span class="line">    (#-n 3#) 上3次运行的</span><br><span class="line">    (#-q#) 只显示容器编号</span><br></pre></td></tr></table></figure>
+<h3 id="退出容器"><a class="markdownIt-Anchor" href="#退出容器"></a> 退出容器</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(#exit#)  在交互式伪终端输入，直接退出</span><br><span class="line">(#ctrl+p+q#)</span><br><span class="line">(#docker stop 容器id#)   温柔的关闭</span><br><span class="line">(#docker kill 容器id#)   强制关闭</span><br></pre></td></tr></table></figure>
+<h3 id="删除已停止的容器"><a class="markdownIt-Anchor" href="#删除已停止的容器"></a> 删除已停止的容器</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(#docker rm 容器id#)  删除一个容器</span><br><span class="line">(#docker rm -f $(docker ps -a -q)#)  删除多个容器</span><br></pre></td></tr></table></figure>
+<h3 id="docker-查看容器相关命令"><a class="markdownIt-Anchor" href="#docker-查看容器相关命令"></a> docker 查看容器相关命令</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">查看容器日志</span><br><span class="line">(#docker logs  容器id #) </span><br><span class="line">    (#-t#)         加入时间戳</span><br><span class="line">    (#-f#)         跟随最新的日志打印</span><br><span class="line">    (#--tail#)     数字  显示最后多少条</span><br><span class="line"></span><br><span class="line">查看容器内的进程</span><br><span class="line">(#docker top  容器id#)</span><br><span class="line"></span><br><span class="line">查看容器 内部细节</span><br><span class="line">(#docker inspect 容器id#)</span><br></pre></td></tr></table></figure>
+<h2 id="docker-操作容器"><a class="markdownIt-Anchor" href="#docker-操作容器"></a> docker 操作容器</h2>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">进入正在运行的容器，并以交互式终端</span><br><span class="line">(#docker attach 容器id #)   =  (#docker exec -t 容器id /bin/bash#)</span><br><span class="line"></span><br><span class="line">不进入容器，直接执行命令，并在外面获取结果</span><br><span class="line">(#docker exec -t 容器id ls#)         -t的作用是伪终端，实际是使回显更好看</span><br><span class="line"></span><br><span class="line">从容器内拷贝文件到主机上</span><br><span class="line">(#docker cp 容器id:容器内路径 主机路径#)</span><br><span class="line"></span><br><span class="line">提交</span><br><span class="line">(#docker commit -m &quot;提交信息&quot; -a &quot;作者&quot; 容器id 前缀/容器新名字:TAG#)</span><br></pre></td></tr></table></figure>
+<h2 id="docker-操作数据卷"><a class="markdownIt-Anchor" href="#docker-操作数据卷"></a> docker 操作数据卷</h2>
+<h3 id="直接命令添加"><a class="markdownIt-Anchor" href="#直接命令添加"></a> 直接命令添加</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(#docker run -it -v /宿主机的绝对路径:/容器内的目录[:ro]#)    </span><br><span class="line"></span><br><span class="line">ro的作用是(#只读#)，如果没有这样的文件夹则(#会自动创建#)</span><br><span class="line">如果报错说权限不够的话</span><br><span class="line">    (#--privileged=true#)</span><br></pre></td></tr></table></figure>
+<h3 id="dockerfile添加"><a class="markdownIt-Anchor" href="#dockerfile添加"></a> dockerfile添加</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># volume test Dockerfile</span><br><span class="line">       FROM centos</span><br><span class="line">       (#VOLUME [&quot;/dataVolumeContainer1&quot;,&quot;/dataVolumeContainer2&quot;]#)</span><br><span class="line">       CMD echo &quot;finished.-----success1&quot;</span><br><span class="line">       CMD /bin/bash</span><br></pre></td></tr></table></figure>
+<p>通过dockerfile添加的数据卷，如何查看宿主机对应的文件夹<br>
+(#docker inspect imagename#)</p>
+<h3 id="数据卷的传递"><a class="markdownIt-Anchor" href="#数据卷的传递"></a> 数据卷的传递</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(#docker run -it --name dc02 --volumes-from dc01 yuxiao/centos#)</span><br><span class="line"></span><br><span class="line">在任意容器中修改文件 则都会修改</span><br><span class="line">删除所继承的容器，文件仍然在，仍然共享</span><br></pre></td></tr></table></figure>
+<h2 id="dockerfile相关指令"><a class="markdownIt-Anchor" href="#dockerfile相关指令"></a> dockerfile相关指令</h2>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">FROM : 当前新景象是基于哪个镜像</span><br><span class="line">        (#MAINTANER#)： 维护者的姓名和邮件地址</span><br><span class="line">        (#RUN#)        运行命令</span><br><span class="line">        (#WORKDIR#)    登陆后的工作目录</span><br><span class="line">        (#EXPOSE#)     暴漏的端口</span><br><span class="line">        (#ENV#)        可以在RUN命令中使用</span><br><span class="line">        (#ADD#)        拷贝+解压缩,支持URL</span><br><span class="line">        (#COPY#)       src dest</span><br><span class="line">        VOLUME </span><br><span class="line">        CMD 指定容器启动时要执行的命令</span><br><span class="line">            可以有多个CMD命令  (#但只有最后一个生效#)</span><br><span class="line">                </span><br><span class="line">            CMD 也会被docker run之后的参数(#替换#)</span><br><span class="line">                docker run -it 7777:8080 ls -l</span><br><span class="line">                    会被ls -l 替换</span><br><span class="line">            CMD [&quot;catalina.sh&quot;,&quot;run&quot;]</span><br><span class="line"></span><br><span class="line">        ENTRYPOINT </span><br><span class="line">            指定一个容器启动时要运行的命令</span><br><span class="line">            ENTRYPOINT 不会被docker run之后的参数替换，会追加</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        ONBUILD </span><br><span class="line">            当够构建一个被继承的dockerfile运行命令，父镜像在被子镜像继承后父镜像要做的一些操作</span><br></pre></td></tr></table></figure>
+<h2 id="git从仓库中删除已经被跟踪的文件git"><a class="markdownIt-Anchor" href="#git从仓库中删除已经被跟踪的文件git"></a> git从仓库中删除已经被跟踪的文件[#git#]</h2>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git rm --cached 文件名</span><br><span class="line">git rm --cached -r 目录</span><br></pre></td></tr></table></figure>
+  </div>
+  <script>
+    var contentNode = document.getElementsByClassName("content")[1]
+    contentNode.innerHTML = contentNode.innerHTML.replace(/\(#(.*?)#\)/g, "<font class=\"cloze\">$1</font>")
+     contentNode.innerHTML = contentNode.innerHTML.replace(/(<p>)?\[#(.*?)#\](<\/p>)?/g, "")
+  </script>
+  <!-- <div class="js-toc"></div> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/css/tocbot.css"><style>
+    .js-toc {
+        width: 200px;
+        height: auto;
+        z-index: 98;
+        background-color: rgba(255,255,255,0);
+        transform: translateX(0);
+        right: calc((100% - 10px) );
+        top: 60px;
+        position: fixed;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+  </style><script src="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/js/tocbot.js"></script><div class="js-toc"></div><script type="text/javascript">
+    tocbot.init({"contentSelector":".content","scrollSmooth":true,"headingSelector":"h1, h2, h3, h4, h5","headingsOffset":45,"scrollSmoothOffset":-45,"tocSelector":".js-toc","ignoreSelector":".js-toc-ignore","linkClass":"toc-link","extraLinkClasses":"","activeLinkClass":"is-active-link","listClass":"toc-list","extraListClasses":"","isCollapsedClass":"is-collapsed","collapsibleClass":"is-collapsible","listItemClass":"toc-list-item","activeListItemClass":"is-active-li","collapseDepth":0,"scrollSmoothDuration":420,"throttleTimeout":50,"positionFixedSelector":null,"positionFixedClass":"is-position-fixed","fixedSidebarOffset":"auto","includeHtml":false,"onClick":false,"orderedList":true,"scrollContainer":null})
+  </script>
+  <style> 
+  /* 目录相关css */
+    .js-toc {
+      width: 180px;
+      display: none;
+    }
+    .is-active-link {
+      color: #2bbc8a !important;
+    }
+    .is-active-link::before {
+      background-color: #eee !important;
+    }
+    .toc-link::before {
+      background-color: #2bbc8a !important;
+      content: '-' !important;
+    }
+    .content a{
+      background-image: none !important;
+     
+    }
+    .post p a{
+      color:#3a85c7
+    }
+    #header-post #nav{
+      font-size: 1rem;
+    }
+  </style>
+  <style>
+    .zhao-cover-img-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10002;
+
+      background: rgba(0, 0, 0, 0.7);
+      overflow-y: scroll;
+    }
+
+    .zhao-cover-img {
+      width: 70%;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .zhao-no-scroll {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+  </style>
+  <script> //点击放大相关
+
+   
+     function calculateWH(imgWidth,imgHeight){
+        var sw = $(window).width();
+        var sh = $(window).height();
+        var scale = 0.8;
+        var radio = imgHeight / imgWidth;
+          var width = sw * scale;
+          var height = width * radio;
+          if (height > sh) {
+            height = sh * scale;
+            width = height / radio;
+            if (width > sw) {
+              if (radio > 1) {
+                height = sh * scale;
+                width = height / radio;
+              } else {
+                width = sw * scale;
+                height = width * radio;
+              }
+            }
+          }
+          return [width,height];
+      }
+    function createImgEventFullScreen() {
+      var imgs = $(".content").find("img");
+      console.log(imgs);
+      for (var i = 0; i < imgs.length; i++) {
+        // $(imgs[i]).click(createCover(imgs[i]));
+        imgs[i].onclick = function(e) {
+          var src = e.srcElement.currentSrc;
+          createCover(src);
+        };
+      }
+     
+      function createCover(src) {
+        // 创建对象
+        var img = new Image();
+        // 改变图片的src
+        img.src = src;
+        // 判断是否有缓存
+        if (img.complete) {
+          // 打印
+          var wh = calculateWH(img.width,img.height);
+          createCoverWithWidth(wh[0], wh[1], src);
+        } else {
+          // 加载完成执行
+          img.onload = function() {
+            var wh = calculateWH(img.width,img.height);
+            createCoverWithWidth(img.width, img.height, src);
+          };
+        }
+      }
+      
+      function createCoverWithWidth(width, height, src) {
+        var cover = $(
+          "<div id='fullScreenCover' class='zhao-cover-img-container'><img id='cover-img' w='"+width+"' h='"+height+"' class='zhao-cover-img' src='" +
+            src +
+            "' style='width:" +
+            width +
+            "px;height:'" +
+            height +
+            "px'/></div>"
+        );
+        $("#fullScreenCover").remove();
+        $("body").append(cover);
+        $("body").addClass("zhao-no-scroll");
+        $("#fullScreenCover").click(function() {
+          $("#fullScreenCover").remove();
+          $("body").removeClass("zhao-no-scroll");
+        });
+      }
+    }
+    function autoAjustCover() {
+      if ($("#cover-img").length > 0) {
+        var img = $("#cover-img")[0];
+        var wh = calculateWH(img.getAttribute("w"),img.getAttribute("h"));
+        img.style.width = wh[0]+"px";
+        img.style.height = wh[1]+"px";
+      }
+      ajustToc();
+     
+    }
+
+    function ajustToc(){
+      var sw = $(window).width();
+      var content = $(".content").width();
+      var padding = (sw-content)/2;
+      var currentLeft = parseInt($(".js-toc")[0].style.left,10);
+      var left = 0;
+      var width = 180;
+      if(padding<400){
+        left = padding - 180-80;
+        width = 200;
+      }else if(padding<600){
+        left = 140;
+        width = padding - left-80;
+        if(width<200) width = 200;
+      }else{
+        left = padding - 400;
+        width = 300;
+      }
+      if(left<0){
+        $(".js-toc")[0].style.display = "none";
+      }else{
+
+        $(".js-toc")[0].style.display = "inline";
+        $(".js-toc")[0].style.left=left+"px";
+        $(".js-toc")[0].style.width = width+"px";
+      }
+    }
+    window.onresize = function() {
+      autoAjustCover();
+    };
+    setTimeout(function() {
+      createImgEventFullScreen();
+    }, 1000);
+    
+    //  contentNode.innerHTML = contentNode.innerHTML.replace(/\(#(.*?)#\)/g, "<font class=\"cloze\">$1</font>")
+    //  contentNode.innerHTML = contentNode.innerHTML.replace(/(<p>)?\[#(.*?)#\](<\/p>)?/g, "")
+  </script>
+</article>
+
+
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="/js/Valine.min.js"></script> 
+    <!-- <script src='//unpkg.com/valine/dist/Valine.min.js'></script> -->
+    <!-- && theme.disqus.enabled <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div> -->
+
+    <style>
+        #lv-container .reply-content{
+            color: white;
+        }
+    
+    </style>
+    <div style="height:90px;">
+            <h2 style="text-align: left;margin-bottom: 0px">精彩评论</h2>
+                    <hr  style="height:1px;border:none;border-top:1px solid #555555;margin-top: 8px;"/>
+    </div>
+    
+    <div style="position:relative">
+           
+            <div id="lv-container" style="background:rgb(255, 255, 255);padding-left: 10px;padding-right: 10px;" data-id="city" data-uid="MTAyMC80Mzg0OC8yMDM4Mw==">
+                <script type="text/javascript">
+               (function(d, s) {
+                   var j, e = d.getElementsByTagName(s)[0];
+            
+                   if (typeof LivereTower === 'function') { return; }
+                    
+                   j = d.createElement(s);
+                   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                   j.async = true;
+                   e.parentNode.insertBefore(j, e);
+               
+              
+               })(document, 'script');
+                </script>
+               
+            <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+            </div>
+            <div style="height: 50px;background:#1d1f21;position: absolute;bottom: 0px;width: 100%;"></div> 
+    </div>
+   
+    <!-- <div id="vcomments"></div>
+    <style>
+        .vinput{
+            color:white;
+        }
+        .vcode.vinput{
+            color:black
+        }
+        .v .vwrap .vheader .vinput{
+            border-bottom:1px solid #dedede
+        }
+    </style>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: '1xkWvBBcVNOuCSs7iYmxXv9d-gzGzoHsz',
+            appKey: 'czIcghVV8lSRBdPQa9UzaNXP',
+            verify:true,
+            placeholder:'Come on Baby!'
+        })
+       
+        
+    </script> -->
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-实现了博客对anki的转换"><span class="toc-number">1.</span> <span class="toc-text"> *1. 实现了博客对Anki的转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker-和镜像相关的命令"><span class="toc-number">2.</span> <span class="toc-text"> docker 和镜像相关的命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#列出镜像"><span class="toc-number">2.1.</span> <span class="toc-text"> 列出镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#搜索镜像"><span class="toc-number">2.2.</span> <span class="toc-text"> 搜索镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除镜像"><span class="toc-number">2.3.</span> <span class="toc-text"> 删除镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除全部镜像"><span class="toc-number">2.4.</span> <span class="toc-text"> 删除全部镜像</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker-和容器相关的命令"><span class="toc-number">3.</span> <span class="toc-text"> docker 和容器相关的命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#启动容器"><span class="toc-number">3.1.</span> <span class="toc-text"> 启动容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#列出所有容器"><span class="toc-number">3.2.</span> <span class="toc-text"> 列出所有容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#退出容器"><span class="toc-number">3.3.</span> <span class="toc-text"> 退出容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除已停止的容器"><span class="toc-number">3.4.</span> <span class="toc-text"> 删除已停止的容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#docker-查看容器相关命令"><span class="toc-number">3.5.</span> <span class="toc-text"> docker 查看容器相关命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker-操作容器"><span class="toc-number">4.</span> <span class="toc-text"> docker 操作容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker-操作数据卷"><span class="toc-number">5.</span> <span class="toc-text"> docker 操作数据卷</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#直接命令添加"><span class="toc-number">5.1.</span> <span class="toc-text"> 直接命令添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dockerfile添加"><span class="toc-number">5.2.</span> <span class="toc-text"> dockerfile添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据卷的传递"><span class="toc-number">5.3.</span> <span class="toc-text"> 数据卷的传递</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dockerfile相关指令"><span class="toc-number">6.</span> <span class="toc-text"> dockerfile相关指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git从仓库中删除已经被跟踪的文件git"><span class="toc-number">7.</span> <span class="toc-text"> git从仓库中删除已经被跟踪的文件[#git#]</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/posts/4a1b6862/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/posts/4a1b6862/&text=2019.7.22-星期一"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/posts/4a1b6862/&title=2019.7.22-星期一"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/posts/4a1b6862/&is_video=false&description=2019.7.22-星期一"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=2019.7.22-星期一&body=Check out this article: http://yoursite.com/posts/4a1b6862/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/posts/4a1b6862/&title=2019.7.22-星期一"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/posts/4a1b6862/&title=2019.7.22-星期一"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/posts/4a1b6862/&title=2019.7.22-星期一"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/posts/4a1b6862/&title=2019.7.22-星期一"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/posts/4a1b6862/&name=2019.7.22-星期一&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  
+  <script
+    async
+    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+  ></script>
+
+  <span id="busuanzi_container_site_pv"
+    >总访问量<span id="busuanzi_value_site_pv"></span>次</span
+  >
+  <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_uv"
+    >总访客<span id="busuanzi_value_site_uv"></span>人</span
+  >
+  <span class="post-meta-divider">|</span>
+  
+
+  <div class="footer-left">
+    Copyright &copy; 2019 八道真君
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+        <li>
+          <a href="/"
+            >Home</a
+          >
+        </li>
+        
+        <li>
+          <a href="/about/"
+            >About</a
+          >
+        </li>
+        
+        <li>
+          <a href="/archives/"
+            >Writing</a
+          >
+        </li>
+        
+        <li>
+          <a href="/categories/"
+            >Categories</a
+          >
+        </li>
+        
+        <li>
+          <a href="/tags/"
+            >Tags</a
+          >
+        </li>
+        
+      </ul>
+    </nav>
+  </div>
+
+  <style>
+    body {
+      max-width: 60rem !important;
+      font-size: 1rem !important;
+      font-weight: 500 !important;
+    }
+    h2{
+      color:#2bbc8a !important;
+    }
+    h3{
+      font-size: 1rem !important;
+      color: #e0d1ac !important;
+      text-decoration: none !important;
+    }
+    code{
+      margin-left: 2px;
+      margin-right: 2px;
+      font-size: 15px;
+      font-weight: 1000;
+      padding: 2px;
+      border: 1px dotted #666;
+      color:  #2bbc8a
+    }
+    body td{
+      padding: 0px 8px 0
+    }
+    .katex {
+      font: 400 1em KaTeX_Main,Times New Roman,serif;
+    }
+    .px3 {
+      padding-right: 3rem;
+      padding-left: 3rem;
+    }
+
+    .highlight {
+      background: black !important;
+    }
+    pre {
+      font-size: 0.9rem !important;
+    }
+    html {
+      border-top: 0px !important;
+    }
+    #header #nav {
+      font-size: 1rem;
+    }
+    .abtn {
+      background: rgba(255, 255, 255, 0);
+      color: white;
+      text-align: left;
+      border: 0;
+      outline: none;
+      text-decoration: none;
+      font-size: 13px;
+      left: 2px;
+      display: inline-block;
+    }
+    .abtn:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .no-is-collapsed {
+      max-height: 1000px;
+    }
+    .js-toc-expanded {
+      max-height: 800px;
+      overflow-y: scroll;
+    }
+    .js-toc-expanded::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+
+  <script>
+    var isExpanded = false;
+    var isShow = true;
+    $(document).ready(function() {
+      if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+        $("body")[0].style.paddingLeft = "2rem";
+        $("body")[0].style.paddingRight = "2rem";
+       
+        //移动端
+        $("body")[0].style.maxWidth = "48rem!important";
+        if ($(".js-toc").length == 0) {
+          $("#bottom-placeholder")[0].style.height = "0px";
+        }else{
+          $("#bottom-placeholder")[0].style.height = "64px";
+        }
+      } else {
+        $("body")[0].style.maxWidth = "60%!important";
+        $("#bottom-placeholder")[0].style.height = "0px";
+      }
+      // if (document.documentElement.clientWidth <= 1250) {
+      //   document.getElementsByClassName("js-toc")[0].style.display = "none";
+      // } else {
+      //   var style = document.getElementsByClassName("js-toc")[0].style;
+      //   style.display = "inline";
+      //   if(document.documentElement.clientWidth>1400){
+      //       style.left = "5%"
+      //   }else{
+      //       style.left = "1%"
+      //   }
+      // }
+   
+      if ($(".js-toc").length > 0) {
+        ajustToc(); //此函数在post.ejs
+        $(".js-toc").prepend(
+          "<div ><div style='display: inline-block;'><button class='abtn' id='show' onclick='toggleTocShow()'>显示目录</button><button class='abtn' id='expand' onclick='toggleToc()'>展开</button></div><div style='display: inline-block;'><font style='font-size:13px;color:#2bbc8a'  id='tip'>1%<font></div></div>"
+        );
+        showScrollTip();
+        toggleTocShow();
+        $(window).bind("scroll", function() {
+          showScrollTip();
+          // var liTop = $(".is-active-li").position().top;    
+          // var contentH = $(".js-toc").height();
+          // var clientH = 800;
+          // var scrolltop =0;
+          // if(liTop>800&&liTop<850){
+          //   scrolltop = 400;
+          // }else if(liTop>1200&&liTop<1250){
+          //   scrolltop = 800;
+          // }else if(liTop>1600&&liTop<1650){
+          //   scrolltop = 1200;
+          // }
+
+
+
+          
+          // if((liTop+800)>contentH){
+          //   scrolltop = contentH-800;
+          // }
+          // $(".js-toc").animate({scrollTop:scrolltop},300);   
+          // console.log($(".is-active-li").position().top);          
+        });
+        
+      }
+    });
+    function showScrollTip(){
+      var top = $(this).scrollTop(); // 当前窗口的滚动距离
+          var contentY = $("article .content").offset().top;
+          var contentH = $("article .content").height();
+          var cw = $(window).height();
+          // console.log("cw:"+cw+",top:"+top+",contentY:"+contentY+",contentH:"+contentH);
+          var tip = parseInt((cw+top-contentY)/contentH*100);
+          if(tip>100) tip=100;
+          $("#tip").text(tip+"%");
+    }
+    function toggleToc() {
+      if (isExpanded) {
+        $(".no-is-collapsed").each(function(e) {
+          $(this).removeClass("no-is-collapsed");
+        });
+        $("#expand").text("展开");
+        isExpanded = false;
+        $(".js-toc").each(function(e) {
+          $(this).removeClass("js-toc-expanded");
+        });
+      } else {
+        $(".is-collapsed").each(function(e) {
+          $(this).addClass("no-is-collapsed");
+        });
+        $("#expand").text("自动");
+        $(".js-toc").each(function(e) {
+          $(this).addClass("js-toc-expanded");
+        });
+        isExpanded = true;
+      }
+    }
+    function toggleTocShow(){
+       if(isShow){
+          $(".toc-list:first").hide();
+          $("#show").text("显示目录");
+          $("#expand").hide();
+       }else{
+         $("#expand").show();
+         $(".toc-list:first").show();
+         $("#show").text("隐藏目录");
+       }
+       isShow =! isShow;
+    }
+  </script>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?acdcaa5a48f961d9125ca706ddde18e1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+<!-- Disqus Comments -->
+
+
+    <div id="bottom-placeholder" style="height:0px;"></div>
+</body>
+</html>

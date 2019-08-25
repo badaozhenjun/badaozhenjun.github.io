@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang=en>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
-    <meta name="description" content="设置快捷键和伙伴关系   设置tab顺序  designer中可以直接编辑action 右键添加工具条 拖动action可以放在工具条上 三种窗口 QMainWindow 可以包含菜单栏、工具栏、状态栏 QWidget 不确定窗口的用途，就使用QWidget QDialog 对话窗口的基类，没有菜单栏、工具栏、状态栏 如何创建一个主窗口 如何让主窗口居中    screen = QDesktop">
+    <meta name="description" content="设置快捷键和伙伴关系   设置tab顺序  designer中可以直接编辑action 右键添加工具条 拖动action可以放在工具条上 三种窗口 QMainWindow 可以包含菜单栏、工具栏、状态栏 QWidget 不确定窗口的用途，就使用QWidget QDialog 对话窗口的基类，没有菜单栏、工具栏、状态栏 如何创建一个主窗口 如何让主窗口居中 screen = QDesktopWid">
 <meta name="keywords" content="ios,物联网,人工智能,网络安全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PyQt5学习">
 <meta property="og:url" content="http://yoursite.com/posts/4509db9a/index.html">
 <meta property="og:site_name" content="八道真君">
-<meta property="og:description" content="设置快捷键和伙伴关系   设置tab顺序  designer中可以直接编辑action 右键添加工具条 拖动action可以放在工具条上 三种窗口 QMainWindow 可以包含菜单栏、工具栏、状态栏 QWidget 不确定窗口的用途，就使用QWidget QDialog 对话窗口的基类，没有菜单栏、工具栏、状态栏 如何创建一个主窗口 如何让主窗口居中    screen = QDesktop">
+<meta property="og:description" content="设置快捷键和伙伴关系   设置tab顺序  designer中可以直接编辑action 右键添加工具条 拖动action可以放在工具条上 三种窗口 QMainWindow 可以包含菜单栏、工具栏、状态栏 QWidget 不确定窗口的用途，就使用QWidget QDialog 对话窗口的基类，没有菜单栏、工具栏、状态栏 如何创建一个主窗口 如何让主窗口居中 screen = QDesktopWid">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190531113852.gif">
 <meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190531114250.png">
 <meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190531140630.png">
-<meta property="og:updated_time" content="2019-06-01T02:47:38.602Z">
+<meta property="og:updated_time" content="2019-08-22T02:21:20.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PyQt5学习">
-<meta name="twitter:description" content="设置快捷键和伙伴关系   设置tab顺序  designer中可以直接编辑action 右键添加工具条 拖动action可以放在工具条上 三种窗口 QMainWindow 可以包含菜单栏、工具栏、状态栏 QWidget 不确定窗口的用途，就使用QWidget QDialog 对话窗口的基类，没有菜单栏、工具栏、状态栏 如何创建一个主窗口 如何让主窗口居中    screen = QDesktop">
+<meta name="twitter:description" content="设置快捷键和伙伴关系   设置tab顺序  designer中可以直接编辑action 右键添加工具条 拖动action可以放在工具条上 三种窗口 QMainWindow 可以包含菜单栏、工具栏、状态栏 QWidget 不确定窗口的用途，就使用QWidget QDialog 对话窗口的基类，没有菜单栏、工具栏、状态栏 如何创建一个主窗口 如何让主窗口居中 screen = QDesktopWid">
 <meta name="twitter:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190531113852.gif">
     
     
@@ -77,7 +77,7 @@
         
       </ul>
     </span>
-    <br>
+    <br/>
     <span id="actions">
       <ul>
         
@@ -94,7 +94,7 @@
       <span id="i-top" class="info" style="display:none;">Back to top</span>
       <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
-    <br>
+    <br/>
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/posts/4509db9a/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
@@ -130,20 +130,32 @@
 
 
     <div class="meta">
-      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">八道真君</span>
+      <span
+        class="author"
+        itemprop="author"
+        itemscope
+        itemtype="http://schema.org/Person"
+      >
+        <span itemprop="name"
+          >八道真君</span
+        >
       </span>
       
     <div class="postdate">
       
         <time datetime="2019-05-31T03:40:41.000Z" itemprop="datePublished">2019-05-31</time>
         
-        (Updated: <time datetime="2019-06-01T02:47:38.602Z" itemprop="dateModified">2019-06-01</time>)
+        (Updated: <time datetime="2019-08-22T02:21:20.782Z" itemprop="dateModified">2019-08-22</time>)
         
       
     </div>
 
  
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/软件/">软件</a>
+    </div>
+
  <style>
         .tag-link::before{
           color: #2bbc8a;
@@ -173,13 +185,9 @@ QDialog<br>
 对话窗口的基类，没有菜单栏、工具栏、状态栏</p>
 <p>如何创建一个主窗口<br>
 如何让主窗口居中</p>
-<pre><code>   screen = QDesktopWidget().screenGeometry()
-    s = self.geometry()
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">screen = QDesktopWidget().screenGeometry()</span><br><span class="line"> s = self.geometry()</span><br></pre></td></tr></table></figure>
 <p>退出程序</p>
-<pre><code>app = QApplication.instance()
-    app.quit()
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">app = QApplication.instance()</span><br><span class="line">    app.quit()</span><br></pre></td></tr></table></figure>
 <p>手动添加按钮和水平布局<br>
 <img src="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190531140630.png" alt></p>
 <p>屏幕坐标系</p>
@@ -187,9 +195,7 @@ QDialog<br>
 <p>设置icon<br>
 窗口的setWindowIcon在苹果下面无效在windows下面有效<br>
 但是application的setWindowIcon在两边都有效</p>
-<pre><code>QApplication.instance().setWindowIcon(QIcon())
-QMainWindow.setWindowIcon(QIcon())
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">QApplication.instance().setWindowIcon(QIcon())</span><br><span class="line">QMainWindow.setWindowIcon(QIcon())</span><br></pre></td></tr></table></figure>
 <p>显示控件的提示信息</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line">QToolTip.setFont(QFont(<span class="string">'SanSerif'</span>,<span class="number">12</span>))</span><br><span class="line">button.setToolTip(<span class="string">'今天是&lt;b&gt;星期五&lt;b&gt;'</span>) <span class="comment">#支持富文本</span></span><br></pre></td></tr></table></figure>
 <p>QLabel</p>
@@ -331,6 +337,11 @@ QMessageBox，QFileDialog，QColorDialog，QFontDialog，QInputDialog</p>
 <p>QFileDialog</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line">fname,_=QFileDialog.getOpenFileName(self,<span class="string">'Open file'</span>,<span class="string">'C:\\'</span>,<span class="string">'Image files (*.jpg *.gif *.png *.jpeg)'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取多个文件</span></span><br><span class="line"> <span class="comment">#实例化QFileDialog</span></span><br><span class="line">        dig=QFileDialog()</span><br><span class="line">        <span class="comment">#设置可以打开任何文件</span></span><br><span class="line">        dig.setFileMode(QFileDialog.AnyFile)</span><br><span class="line">        <span class="comment">#文件过滤</span></span><br><span class="line">        dig.setFilter(QDir.Files)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> dig.exec_():</span><br><span class="line">            <span class="comment">#接受选中文件的路径，默认为列表</span></span><br><span class="line">            filenames=dig.selectedFiles()</span><br><span class="line">            <span class="comment">#列表中的第一个元素即是文件路径，以只读的方式打开文件</span></span><br><span class="line">            f=open(filenames[<span class="number">0</span>],<span class="string">'r'</span>)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">with</span> f:</span><br><span class="line">                <span class="comment">#接受读取的内容，并显示到多行文本框中</span></span><br><span class="line">                data=f.read()</span><br><span class="line">                self.contents.setText(data)</span><br></pre></td></tr></table></figure>
   </div>
+  <script>
+    var contentNode = document.getElementsByClassName("content")[1]
+    contentNode.innerHTML = contentNode.innerHTML.replace(/\(#(.*?)#\)/g, "<font class=\"cloze\">$1</font>")
+     contentNode.innerHTML = contentNode.innerHTML.replace(/(<p>)?\[#(.*?)#\](<\/p>)?/g, "")
+  </script>
   <!-- <div class="js-toc"></div> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/css/tocbot.css"><style>
     .js-toc {
@@ -403,6 +414,8 @@ QMessageBox，QFileDialog，QColorDialog，QFontDialog，QInputDialog</p>
     }
   </style>
   <script> //点击放大相关
+
+   
      function calculateWH(imgWidth,imgHeight){
         var sw = $(window).width();
         var sh = $(window).height();
@@ -493,12 +506,12 @@ QMessageBox，QFileDialog，QColorDialog，QFontDialog，QInputDialog</p>
       var left = 0;
       var width = 180;
       if(padding<400){
-        left = padding - 200;
-        width = 180;
+        left = padding - 180-80;
+        width = 200;
       }else if(padding<600){
-        left = 200;
-        width = padding - left-100;
-        if(width<180) width = 180;
+        left = 140;
+        width = padding - left-80;
+        if(width<200) width = 200;
       }else{
         left = padding - 400;
         width = 300;
@@ -506,6 +519,7 @@ QMessageBox，QFileDialog，QColorDialog，QFontDialog，QInputDialog</p>
       if(left<0){
         $(".js-toc")[0].style.display = "none";
       }else{
+
         $(".js-toc")[0].style.display = "inline";
         $(".js-toc")[0].style.left=left+"px";
         $(".js-toc")[0].style.width = width+"px";
@@ -517,6 +531,9 @@ QMessageBox，QFileDialog，QColorDialog，QFontDialog，QInputDialog</p>
     setTimeout(function() {
       createImgEventFullScreen();
     }, 1000);
+    
+    //  contentNode.innerHTML = contentNode.innerHTML.replace(/\(#(.*?)#\)/g, "<font class=\"cloze\">$1</font>")
+    //  contentNode.innerHTML = contentNode.innerHTML.replace(/(<p>)?\[#(.*?)#\](<\/p>)?/g, "")
   </script>
 </article>
 
@@ -538,7 +555,7 @@ QMessageBox，QFileDialog，QColorDialog，QFontDialog，QInputDialog</p>
     </style>
     <div style="height:90px;">
             <h2 style="text-align: left;margin-bottom: 0px">精彩评论</h2>
-                    <hr style="height:1px;border:none;border-top:1px solid #555555;margin-top: 8px;">
+                    <hr  style="height:1px;border:none;border-top:1px solid #555555;margin-top: 8px;"/>
     </div>
     
     <div style="position:relative">
@@ -643,11 +660,18 @@ QMessageBox，QFileDialog，QColorDialog，QFontDialog，QInputDialog</p>
         
         <footer id="footer">
   
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script
+    async
+    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+  ></script>
 
-  <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+  <span id="busuanzi_container_site_pv"
+    >总访问量<span id="busuanzi_value_site_pv"></span>次</span
+  >
   <span class="post-meta-divider">|</span>
-  <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+  <span id="busuanzi_container_site_uv"
+    >总访客<span id="busuanzi_value_site_uv"></span>人</span
+  >
   <span class="post-meta-divider">|</span>
   
 
@@ -659,23 +683,33 @@ QMessageBox，QFileDialog，QColorDialog，QFontDialog，QInputDialog</p>
       <ul>
         
         <li>
-          <a href="/">Home</a>
+          <a href="/"
+            >Home</a
+          >
         </li>
         
         <li>
-          <a href="/about/">About</a>
+          <a href="/about/"
+            >About</a
+          >
         </li>
         
         <li>
-          <a href="/archives/">Writing</a>
+          <a href="/archives/"
+            >Writing</a
+          >
         </li>
         
         <li>
-          <a href="/categories/">Categories</a>
+          <a href="/categories/"
+            >Categories</a
+          >
         </li>
         
         <li>
-          <a href="/tags/">Tags</a>
+          <a href="/tags/"
+            >Tags</a
+          >
         </li>
         
       </ul>
@@ -729,7 +763,6 @@ QMessageBox，QFileDialog，QColorDialog，QFontDialog，QInputDialog</p>
       font-size: 1rem;
     }
     .abtn {
-      width: 100%;
       background: rgba(255, 255, 255, 0);
       color: white;
       text-align: left;
@@ -759,6 +792,7 @@ QMessageBox，QFileDialog，QColorDialog，QFontDialog，QInputDialog</p>
 
   <script>
     var isExpanded = false;
+    var isShow = true;
     $(document).ready(function() {
       if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
         $("body")[0].style.paddingLeft = "2rem";
@@ -786,12 +820,14 @@ QMessageBox，QFileDialog，QColorDialog，QFontDialog，QInputDialog</p>
       //       style.left = "1%"
       //   }
       // }
+   
       if ($(".js-toc").length > 0) {
         ajustToc(); //此函数在post.ejs
         $(".js-toc").prepend(
-          "<div ><div style='display: inline-block;'><button class='abtn' onclick='toggleToc()'>展开</button></div><div style='display: inline-block;'><font style='font-size:13px;color:#2bbc8a'  id='tip'>1%<font></div></div>"
+          "<div ><div style='display: inline-block;'><button class='abtn' id='show' onclick='toggleTocShow()'>显示目录</button><button class='abtn' id='expand' onclick='toggleToc()'>展开</button></div><div style='display: inline-block;'><font style='font-size:13px;color:#2bbc8a'  id='tip'>1%<font></div></div>"
         );
         showScrollTip();
+        toggleTocShow();
         $(window).bind("scroll", function() {
           showScrollTip();
           // var liTop = $(".is-active-li").position().top;    
@@ -815,6 +851,7 @@ QMessageBox，QFileDialog，QColorDialog，QFontDialog，QInputDialog</p>
           // $(".js-toc").animate({scrollTop:scrolltop},300);   
           // console.log($(".is-active-li").position().top);          
         });
+        
       }
     });
     function showScrollTip(){
@@ -832,7 +869,7 @@ QMessageBox，QFileDialog，QColorDialog，QFontDialog，QInputDialog</p>
         $(".no-is-collapsed").each(function(e) {
           $(this).removeClass("no-is-collapsed");
         });
-        $(".abtn").text("展开");
+        $("#expand").text("展开");
         isExpanded = false;
         $(".js-toc").each(function(e) {
           $(this).removeClass("js-toc-expanded");
@@ -841,12 +878,24 @@ QMessageBox，QFileDialog，QColorDialog，QFontDialog，QInputDialog</p>
         $(".is-collapsed").each(function(e) {
           $(this).addClass("no-is-collapsed");
         });
-        $(".abtn").text("自动");
+        $("#expand").text("自动");
         $(".js-toc").each(function(e) {
           $(this).addClass("js-toc-expanded");
         });
         isExpanded = true;
       }
+    }
+    function toggleTocShow(){
+       if(isShow){
+          $(".toc-list:first").hide();
+          $("#show").text("显示目录");
+          $("#expand").hide();
+       }else{
+         $("#expand").show();
+         $(".toc-list:first").show();
+         $("#show").text("隐藏目录");
+       }
+       isShow =! isShow;
     }
   </script>
 </footer>
