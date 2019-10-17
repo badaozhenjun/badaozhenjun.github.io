@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
+    <meta name="description" content="为kali安装vbox增强 apt-get update &amp;amp;&amp;amp; apt-get install -y linux-headers-$(uname-r)cp /media/cd-rom/VBoxLinuxAdditions.run /root/chmod 755 /root/VBoxLinuxAdditions.runcd/root./VBoxLinuxAdditions.run">
+<meta name="keywords" content="ios,物联网,人工智能,网络安全">
+<meta property="og:type" content="website">
+<meta property="og:title" content="2019.8.20-星期二">
+<meta property="og:url" content="http://yoursite.com/backup/2019-8-20-星期二.html">
+<meta property="og:site_name" content="八道真君">
+<meta property="og:description" content="为kali安装vbox增强 apt-get update &amp;amp;&amp;amp; apt-get install -y linux-headers-$(uname-r)cp /media/cd-rom/VBoxLinuxAdditions.run /root/chmod 755 /root/VBoxLinuxAdditions.runcd/root./VBoxLinuxAdditions.run">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190820162754.png">
+<meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190820170019.png">
+<meta property="og:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190820173951.png">
+<meta property="og:updated_time" content="2019-10-13T00:42:24.887Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019.8.20-星期二">
+<meta name="twitter:description" content="为kali安装vbox增强 apt-get update &amp;amp;&amp;amp; apt-get install -y linux-headers-$(uname-r)cp /media/cd-rom/VBoxLinuxAdditions.run /root/chmod 755 /root/VBoxLinuxAdditions.runcd/root./VBoxLinuxAdditions.run">
+<meta name="twitter:image" content="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190820162754.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>2019.8.20-星期二</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+    <div class="content index py4">
+        
+          <header id="header">
+  <a href="/">
+  
+    
+      <div id="logo" style="background-image: url(/images/logo.png);filter:none;"></div>
+    
+  
+    <div id="title">
+      <h1>八道真君</h1>
+    </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#"><i class="fas fa-bars fa-2x"></i></a>
+      </li>
+       
+        <li><a href="/">Home</a></li>
+       
+        <li><a href="/about/">About</a></li>
+       
+        <li><a href="/archives/">Writing</a></li>
+       
+        <li><a href="/categories/">Categories</a></li>
+       
+        <li><a href="/tags/">Tags</a></li>
+      
+    </ul>
+  </div>
+</header>
+
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  
+
+  <div class="content" itemprop="articleBody">
+      
+          <h4 id="为kali安装vbox增强"><a class="markdownIt-Anchor" href="#为kali安装vbox增强"></a> 为kali安装vbox增强</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get update &amp;&amp; apt-get install -y linux-headers-$(uname-r)</span><br><span class="line">cp /media/<span class="built_in">cd</span>-rom/VBoxLinuxAdditions.run /root/</span><br><span class="line">chmod 755 /root/VBoxLinuxAdditions.run</span><br><span class="line"><span class="built_in">cd</span>/root</span><br><span class="line">./VBoxLinuxAdditions.run</span><br></pre></td></tr></table></figure>
+<h4 id="子域名获取的思路"><a class="markdownIt-Anchor" href="#子域名获取的思路"></a> 子域名获取的思路</h4>
+<p>每个工具获取的结果都放在<br>
+/root/subdomain_data/xxx.com/collectors/xxx/*.txt</p>
+<p>最后massdns汇总，输出到<br>
+/root/subdomain_data/xxx.com/output/*.txt</p>
+<p>将结果录入到数据库</p>
+<p>然后生成截图到<br>
+/root/subdomain_data/xxx.com/<br>
+或者根据界面选择生成截图</p>
+<p>管道和函数之间如何传参<br>
+<a href="https://www.cnblogs.com/cc11001100/p/8974895.html" title="Linux Shell管道调用用户定义函数" target="_blank" rel="noopener">Linux Shell管道调用用户定义函数</a><br>
+管道和python之间如何传参</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="keyword">import</span> fileinput</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> fileinput.input() <span class="keyword">as</span> f_input:</span><br><span class="line">     <span class="keyword">for</span> line <span class="keyword">in</span> f_input:</span><br><span class="line">         print(line, end=<span class="string">''</span>)</span><br></pre></td></tr></table></figure>
+<p>使用的时候就可以这样使用了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls ~ | python3 filein.py</span><br></pre></td></tr></table></figure>
+<p>创建多级目录<br>
+mkdir -p dir1/dir2<br>
+<a href="https://zhuanlan.zhihu.com/p/61890472" title="如何优雅地创建重定向路径中不存在的父目录" target="_blank" rel="noopener">如何优雅地创建重定向路径中不存在的父目录</a></p>
+<h4 id="xshell颜色"><a class="markdownIt-Anchor" href="#xshell颜色"></a> xshell颜色</h4>
+<p><code>~/.bashrc</code>没有执行 在 <code>~/.bash_profile</code> 上判断一下即可:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> [ -f ~/.bashrc ]; <span class="keyword">then</span></span><br><span class="line">      . ~/.bashrc</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<p>段子<br>
+中午一起床就觉得有点类了</p>
+<h4 id="shell学习"><a class="markdownIt-Anchor" href="#shell学习"></a> shell学习</h4>
+<p><img src="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190820162754.png" alt></p>
+<p>!da  执行以da开头的历史命令<br>
+!$   上一个参数<br>
+!!   上一个命令</p>
+<p>使用\cp 可以跳过别名，否则默认执行的是别名 cp -i</p>
+<p>ctrl+R  搜索历史命令<br>
+sleep 6000 &amp;<br>
+命令到后端执行，但是终端关闭的时候也关闭<br>
+nohub sleep 6000 &amp;<br>
+当终端关闭的时候也不关闭</p>
+<p>作业控制</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ctrl z 将当前正在执行的作业放到后台</span><br><span class="line">fg     返回到前台</span><br><span class="line">bg     查看后台的作业</span><br><span class="line">kill %3  杀掉作业号为3的作业</span><br></pre></td></tr></table></figure>
+<p>screen</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">screen -S name        创建一个名字为name的会话</span><br><span class="line">screen -r name        进入到指定的会话</span><br><span class="line">screen -list          列出当前的会话</span><br><span class="line">ctrl+a d              退出当前会话</span><br></pre></td></tr></table></figure>
+<p>重定向</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">0    临时标准输入</span><br><span class="line">1    输出</span><br><span class="line">2    错误</span><br><span class="line"></span><br><span class="line"><span class="variable">$cat</span> &gt;&gt; myfile &lt;&lt;MAYDAY   //直到遇到字符串“MAYDAY”,会停止输入</span><br><span class="line">&gt; Hello there I am using a <span class="variable">$TERIM</span> terminal </span><br><span class="line">&gt; and my user name is <span class="variable">$LOGNAME</span> </span><br><span class="line">&gt; <span class="built_in">bye</span>... </span><br><span class="line">&gt; MAYDAY</span><br><span class="line"></span><br><span class="line">grep <span class="string">"trident"</span> missiles 2&gt;/dev/null</span><br><span class="line"></span><br><span class="line">&amp; 表示等同于的意思，2&gt;&amp;1，表示2的输出重定向等同于1，即和1重定向的文件系统上的位置是一样的</span><br></pre></td></tr></table></figure>
+<p>command &gt; filename 2&gt;&amp;1               把标准输出和标准错误一起重定向到filename文件中(覆盖)<br>
+command &gt;&gt; filename <strong>2&gt;&amp;1</strong>            把标准输出和标准错误<strong>一起重定向到filename文件</strong>中(追加)<br>
+command &lt; filename &gt;filename2        把文件filename中的内容作为command的输入，把标准输出重定向到filename2文件中<br>
+command 0&lt; filename 1&gt; filename2   同上</p>
+<p><img src="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190820170019.png" alt></p>
+<p>tee a.txt<br>
+tee -a  a.txt  追加到tee中</p>
+<h4 id="命令的排序"><a class="markdownIt-Anchor" href="#命令的排序"></a> 命令的排序</h4>
+<p>./configure &amp;&amp; make  前一个命令返回0（执行成功） 后面的才会执行<br>
+./configure || make  前一个命令返回非0（执行失败） 后面的命令才会执行</p>
+<p>mkdir -p 多级目录<br>
+ls /path/aaa || makdir -p /path/aaa</p>
+<p>ping -c1 192.168.0.1 &gt; /dev/null &amp;&amp; echo “is up” || echo “is down”</p>
+<p>shell 中 &amp;&gt; 和&gt;的区别<br>
+&amp;&gt; 表示把1和2都重定向了<br>
+&gt;表示只有1</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$$ ：Shell本身的PID（ProcessID） </span><br><span class="line">$! ：Shell最后运行的后台Process的PID </span><br><span class="line">$? ：最后运行的命令的结束代码（返回值） </span><br><span class="line">$- ：使用Set命令设定的Flag一览 </span><br><span class="line">$* ：所有参数列表。如<span class="string">"$*"</span>用「\<span class="string">"」括起来的情况、以"</span><span class="variable">$1</span> <span class="variable">$2</span> … <span class="variable">$n</span><span class="string">"的形式输出所有参数。 </span></span><br><span class="line"><span class="string"><span class="variable">$@</span> ：所有参数列表。如"</span><span class="variable">$@</span><span class="string">"用「\"」括起来的情况、以"</span><span class="variable">$1</span><span class="string">" "</span><span class="variable">$2</span><span class="string">" … "</span><span class="variable">$n</span><span class="string">" 的形式输出所有参数。 </span></span><br><span class="line"><span class="string"><span class="variable">$#</span> ：添加到Shell的参数个数 </span></span><br><span class="line"><span class="string"><span class="variable">$0</span> ：Shell本身的文件名 </span></span><br><span class="line"><span class="string"><span class="variable">$1</span>～<span class="variable">$n</span> ：添加到Shell的各参数值。<span class="variable">$1</span>是第1参数、<span class="variable">$2</span>是第2参数…。</span></span><br></pre></td></tr></table></figure>
+<p>true 的返回值一直为真<br>
+false 的返回值 一直为假</p>
+<h4 id="文件比较运算符"><a class="markdownIt-Anchor" href="#文件比较运算符"></a> 文件比较运算符</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-e filename 如果 filename存在，则为真 [ -e /var/<span class="built_in">log</span>/syslog ]</span><br><span class="line">-d filename 如果 filename为目录，则为真 [ -d /tmp/mydir ]</span><br><span class="line">-f filename 如果 filename为常规文件，则为真 [ -f /usr/bin/grep ]</span><br><span class="line">-L filename 如果 filename为符号链接，则为真 [ -L /usr/bin/grep ]</span><br><span class="line">-r filename 如果 filename可读，则为真 [ -r /var/<span class="built_in">log</span>/syslog ]</span><br><span class="line">-w filename 如果 filename可写，则为真 [ -w /var/mytmp.txt ]</span><br><span class="line">-x filename 如果 filename可执行，则为真 [ -L /usr/bin/grep ]</span><br><span class="line">filename1-nt filename2 如果 filename1比 filename2新，则为真 [ /tmp/install/etc/services -nt /etc/services ]</span><br><span class="line">filename1-ot filename2 如果 filename1比 filename2旧，则为真 [ /boot/bzImage -ot arch/[i386](https://www.baidu.com/s?wd=i386&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao)/boot/bzImage ]</span><br><span class="line">[! -d filepath]  取非</span><br></pre></td></tr></table></figure>
+<h4 id="字符串比较运算符-请注意引号的使用这是防止空格扰乱代码的好方法"><a class="markdownIt-Anchor" href="#字符串比较运算符-请注意引号的使用这是防止空格扰乱代码的好方法"></a> 字符串比较运算符 （请注意引号的使用，这是防止空格扰乱代码的好方法）</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-z string 如果 string长度为零，则为真 [ -z <span class="string">"<span class="variable">$myvar</span>"</span> ]</span><br><span class="line">-n string 如果 string长度非零，则为真 [ -n <span class="string">"<span class="variable">$myvar</span>"</span> ]</span><br><span class="line">string1= string2 如果 string1与 string2相同，则为真 [ <span class="string">"<span class="variable">$myvar</span>"</span> = <span class="string">"one two three"</span> ]</span><br><span class="line">string1!= string2 如果 string1与 string2不同，则为真 [ <span class="string">"<span class="variable">$myvar</span>"</span> != <span class="string">"one two three"</span> ]</span><br></pre></td></tr></table></figure>
+<h4 id="shell的通配符"><a class="markdownIt-Anchor" href="#shell的通配符"></a> shell的通配符</h4>
+<p><img src="https://adddd-1251699369.cos.ap-shanghai.myqcloud.com/20190820173951.png" alt></p>
+<p>在子shell执行<br>
+/script.sh<br>
+bash script</p>
+<p>在当前shell中执行<br>
+source <a href="http://script.sh" target="_blank" rel="noopener">script.sh</a><br>
+. <a href="http://script.sh" target="_blank" rel="noopener">script.sh</a></p>
+<h4 id="echo-输出带颜色的脚本"><a class="markdownIt-Anchor" href="#echo-输出带颜色的脚本"></a> echo 输出带颜色的脚本</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span>  -e（能解释后面的特殊符号）</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\e[1;31mThis is red text[0m"</span>  <span class="comment"># 打印出来的是红色</span></span><br><span class="line">这里的31 代表的是颜色  0 代表颜色的重置</span><br><span class="line"></span><br><span class="line"><span class="comment">#字体颜色：30m-37m 黑、红、绿、黄、蓝、紫、青、白</span></span><br><span class="line">str=<span class="string">"kimbo zhang"</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[30m <span class="variable">$&#123;str&#125;</span>\033[0m"</span>      <span class="comment">## 黑色字体</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[31m <span class="variable">$&#123;str&#125;</span>\033[0m"</span>      <span class="comment">## 红色</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[32m <span class="variable">$&#123;str&#125;</span>\033[0m"</span>      <span class="comment">## 绿色</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[33m <span class="variable">$&#123;str&#125;</span>\033[0m"</span>      <span class="comment">## 黄色</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[34m <span class="variable">$&#123;str&#125;</span>\033[0m"</span>      <span class="comment">## 蓝色</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[35m <span class="variable">$&#123;str&#125;</span>\033[0m"</span>      <span class="comment">## 紫色</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[36m <span class="variable">$&#123;str&#125;</span>\033[0m"</span>      <span class="comment">## 青色</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[37m <span class="variable">$&#123;str&#125;</span>\033[0m"</span>      <span class="comment">## 白色</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#背景颜色：40-47 黑、红、绿、黄、蓝、紫、青、白</span></span><br><span class="line">str=<span class="string">"kimbo zhang"</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[41;37m <span class="variable">$&#123;str&#125;</span> \033[0m"</span>     <span class="comment">## 红色背景色，白色字体</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[41;33m <span class="variable">$&#123;str&#125;</span> \033[0m"</span>     <span class="comment">## 红底黄字</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[1;41;33m <span class="variable">$&#123;str&#125;</span> \033[0m"</span>   <span class="comment">## 红底黄字 高亮加粗显示</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[5;41;33m <span class="variable">$&#123;str&#125;</span> \033[0m"</span>   <span class="comment">## 红底黄字 字体闪烁显示</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[47;30m <span class="variable">$&#123;str&#125;</span> \033[0m"</span>     <span class="comment">## 白底黑字</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[40;37m <span class="variable">$&#123;str&#125;</span> \033[0m"</span>     <span class="comment">## 黑底白字</span></span><br></pre></td></tr></table></figure>
+<p>自定义变量</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">定义变量:变量名=变量值变量名必须以字母或下划线开头,区分大小写ip=192.168.2.115</span><br><span class="line">引用变量:$变量名或<span class="variable">$&#123;变量名&#125;</span></span><br><span class="line">查看变量:<span class="built_in">echo</span>$变量名 <span class="built_in">set</span>(所有变量:包括自定义变量和环境变量) </span><br><span class="line">取消变量: <span class="built_in">unset</span>变量名  作用范围:仅在当前shel中有效</span><br><span class="line"></span><br><span class="line"><span class="built_in">read</span> ip 等待手动输入并赋值变量</span><br><span class="line"><span class="built_in">read</span> -p <span class="string">"please input a ip: "</span> ip  有提示的输入</span><br></pre></td></tr></table></figure>
+<p>环境变量</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">定义环境变量：方法一<span class="built_in">export</span> back_dir2=/home/backup</span><br><span class="line">             方法二<span class="built_in">export</span> back_dir1自定义变量转换成环境变量引用环境变量：$变量名或&#123;变量名&#125;</span><br><span class="line">查看环境变量：<span class="built_in">echo</span>$变量名 env 例如env Igrep back_dir2</span><br><span class="line">取消环境变量：<span class="built_in">unset</span> 变量名</span><br><span class="line">变量作用范围：在当前shell和子shell有效</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> [ $? -eq 0];<span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"is up"</span></span><br><span class="line"><span class="keyword">else</span> </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"is down"</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<p>坑:定义变量的时候变量后面不能有空格<br>
+坑2:执行[]条件时  “[” 的后面和 “]” 的前面必须有空格</p>
+<h4 id="jq"><a class="markdownIt-Anchor" href="#jq"></a> jq</h4>
+<p>jq “.[].name_value”   # 先遍历再取出name_value</p>
+
+        
+  </div>
+</article>
+
+        
+        <footer id="footer">
+  
+  <script
+    async
+    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+  ></script>
+
+  <span id="busuanzi_container_site_pv"
+    >总访问量<span id="busuanzi_value_site_pv"></span>次</span
+  >
+  <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_uv"
+    >总访客<span id="busuanzi_value_site_uv"></span>人</span
+  >
+  <span class="post-meta-divider">|</span>
+  
+
+  <div class="footer-left">
+    Copyright &copy; 2019 八道真君
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+        <li>
+          <a href="/"
+            >Home</a
+          >
+        </li>
+        
+        <li>
+          <a href="/about/"
+            >About</a
+          >
+        </li>
+        
+        <li>
+          <a href="/archives/"
+            >Writing</a
+          >
+        </li>
+        
+        <li>
+          <a href="/categories/"
+            >Categories</a
+          >
+        </li>
+        
+        <li>
+          <a href="/tags/"
+            >Tags</a
+          >
+        </li>
+        
+      </ul>
+    </nav>
+  </div>
+
+  <style>
+    body {
+      max-width: 60rem !important;
+      font-size: 1rem !important;
+      font-weight: 500 !important;
+    }
+    h2{
+      color:#2bbc8a !important;
+    }
+    h3{
+      font-size: 1rem !important;
+      color: #e0d1ac !important;
+      text-decoration: none !important;
+    }
+    code{
+      margin-left: 2px;
+      margin-right: 2px;
+      font-size: 15px;
+      font-weight: 1000;
+      padding: 2px;
+      border: 1px dotted #666;
+      color:  #2bbc8a
+    }
+    body td{
+      padding: 0px 8px 0
+    }
+    .katex {
+      font: 400 1em KaTeX_Main,Times New Roman,serif;
+    }
+    .px3 {
+      padding-right: 3rem;
+      padding-left: 3rem;
+    }
+
+    .highlight {
+      background: black !important;
+    }
+    pre {
+      font-size: 0.9rem !important;
+    }
+    html {
+      border-top: 0px !important;
+    }
+    #header #nav {
+      font-size: 1rem;
+    }
+    .abtn {
+      background: rgba(255, 255, 255, 0);
+      color: white;
+      text-align: left;
+      border: 0;
+      outline: none;
+      text-decoration: none;
+      font-size: 13px;
+      left: 2px;
+      display: inline-block;
+    }
+    .abtn:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .no-is-collapsed {
+      max-height: 1000px;
+    }
+    .js-toc-expanded {
+      max-height: 800px;
+      overflow-y: scroll;
+    }
+    .js-toc-expanded::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+
+  <script>
+    var isExpanded = false;
+    var isShow = true;
+    $(document).ready(function() {
+      if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+        $("body")[0].style.paddingLeft = "2rem";
+        $("body")[0].style.paddingRight = "2rem";
+       
+        //移动端
+        $("body")[0].style.maxWidth = "48rem!important";
+        if ($(".js-toc").length == 0) {
+          $("#bottom-placeholder")[0].style.height = "0px";
+        }else{
+          $("#bottom-placeholder")[0].style.height = "64px";
+        }
+      } else {
+        $("body")[0].style.maxWidth = "60%!important";
+        $("#bottom-placeholder")[0].style.height = "0px";
+      }
+      // if (document.documentElement.clientWidth <= 1250) {
+      //   document.getElementsByClassName("js-toc")[0].style.display = "none";
+      // } else {
+      //   var style = document.getElementsByClassName("js-toc")[0].style;
+      //   style.display = "inline";
+      //   if(document.documentElement.clientWidth>1400){
+      //       style.left = "5%"
+      //   }else{
+      //       style.left = "1%"
+      //   }
+      // }
+   
+      if ($(".js-toc").length > 0) {
+        ajustToc(); //此函数在post.ejs
+        $(".js-toc").prepend(
+          "<div ><div style='display: inline-block;'><button class='abtn' id='show' onclick='toggleTocShow()'>显示目录</button><button class='abtn' id='expand' onclick='toggleToc()'>展开</button></div><div style='display: inline-block;'><font style='font-size:13px;color:#2bbc8a'  id='tip'>1%<font></div></div>"
+        );
+        showScrollTip();
+        toggleTocShow();
+        $(window).bind("scroll", function() {
+          showScrollTip();
+          // var liTop = $(".is-active-li").position().top;    
+          // var contentH = $(".js-toc").height();
+          // var clientH = 800;
+          // var scrolltop =0;
+          // if(liTop>800&&liTop<850){
+          //   scrolltop = 400;
+          // }else if(liTop>1200&&liTop<1250){
+          //   scrolltop = 800;
+          // }else if(liTop>1600&&liTop<1650){
+          //   scrolltop = 1200;
+          // }
+
+
+
+          
+          // if((liTop+800)>contentH){
+          //   scrolltop = contentH-800;
+          // }
+          // $(".js-toc").animate({scrollTop:scrolltop},300);   
+          // console.log($(".is-active-li").position().top);          
+        });
+        
+      }
+    });
+    function showScrollTip(){
+      var top = $(this).scrollTop(); // 当前窗口的滚动距离
+          var contentY = $("article .content").offset().top;
+          var contentH = $("article .content").height();
+          var cw = $(window).height();
+          // console.log("cw:"+cw+",top:"+top+",contentY:"+contentY+",contentH:"+contentH);
+          var tip = parseInt((cw+top-contentY)/contentH*100);
+          if(tip>100) tip=100;
+          $("#tip").text(tip+"%");
+    }
+    function toggleToc() {
+      if (isExpanded) {
+        $(".no-is-collapsed").each(function(e) {
+          $(this).removeClass("no-is-collapsed");
+        });
+        $("#expand").text("展开");
+        isExpanded = false;
+        $(".js-toc").each(function(e) {
+          $(this).removeClass("js-toc-expanded");
+        });
+      } else {
+        $(".is-collapsed").each(function(e) {
+          $(this).addClass("no-is-collapsed");
+        });
+        $("#expand").text("自动");
+        $(".js-toc").each(function(e) {
+          $(this).addClass("js-toc-expanded");
+        });
+        isExpanded = true;
+      }
+    }
+    function toggleTocShow(){
+       if(isShow){
+          $(".toc-list:first").hide();
+          $("#show").text("显示目录");
+          $("#expand").hide();
+       }else{
+         $("#expand").show();
+         $(".toc-list:first").show();
+         $("#show").text("隐藏目录");
+       }
+       isShow =! isShow;
+    }
+  </script>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?acdcaa5a48f961d9125ca706ddde18e1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+<!-- Disqus Comments -->
+
+
+    <div id="bottom-placeholder" style="height:0px;"></div>
+</body>
+</html>

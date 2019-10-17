@@ -7,18 +7,18 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
-    <meta name="description" content="yangyangwithgnu - 文章思路很清晰 离别歌 - p神博客，代码审计大神 sec-wiki - 安全综合网站">
+    <meta name="description" content="原理 不再多说  防御 xss的防御主要">
 <meta name="keywords" content="ios,物联网,人工智能,网络安全">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安全学习资源">
-<meta property="og:url" content="http://yoursite.com/posts/4b2524a1/index.html">
+<meta property="og:title" content="xss的攻击和防御">
+<meta property="og:url" content="http://yoursite.com/posts/633fb4f6/index.html">
 <meta property="og:site_name" content="八道真君">
-<meta property="og:description" content="yangyangwithgnu - 文章思路很清晰 离别歌 - p神博客，代码审计大神 sec-wiki - 安全综合网站">
+<meta property="og:description" content="原理 不再多说  防御 xss的防御主要">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-25T06:06:38.539Z">
+<meta property="og:updated_time" content="2019-10-13T00:44:57.961Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安全学习资源">
-<meta name="twitter:description" content="yangyangwithgnu - 文章思路很清晰 离别歌 - p神博客，代码审计大神 sec-wiki - 安全综合网站">
+<meta name="twitter:title" content="xss的攻击和防御">
+<meta name="twitter:description" content="原理 不再多说  防御 xss的防御主要">
     
     
         
@@ -38,7 +38,7 @@
         
     
     <!-- title -->
-    <title>安全学习资源</title>
+    <title>xss的攻击和防御</title>
     <!-- styles -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- persian styles -->
@@ -77,10 +77,10 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/posts/633fb4f6/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" href="/posts/49ae5eb5/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
-        <li><a class="icon" href="/posts/2077109e/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" href="/posts/4b2524a1/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -93,22 +93,22 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/posts/4b2524a1/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/posts/4b2524a1/&text=安全学习资源"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/posts/4b2524a1/&title=安全学习资源"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/posts/4b2524a1/&is_video=false&description=安全学习资源"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=安全学习资源&body=Check out this article: http://yoursite.com/posts/4b2524a1/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/posts/4b2524a1/&title=安全学习资源"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/posts/4b2524a1/&title=安全学习资源"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/posts/4b2524a1/&title=安全学习资源"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/posts/4b2524a1/&title=安全学习资源"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/posts/4b2524a1/&name=安全学习资源&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/posts/633fb4f6/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/posts/633fb4f6/&text=xss的攻击和防御"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/posts/633fb4f6/&title=xss的攻击和防御"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/posts/633fb4f6/&is_video=false&description=xss的攻击和防御"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=xss的攻击和防御&body=Check out this article: http://yoursite.com/posts/633fb4f6/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/posts/633fb4f6/&title=xss的攻击和防御"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/posts/633fb4f6/&title=xss的攻击和防御"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/posts/633fb4f6/&title=xss的攻击和防御"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/posts/633fb4f6/&title=xss的攻击和防御"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/posts/633fb4f6/&name=xss的攻击和防御&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
     
     <!-- <div id="toc">
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#原理"><span class="toc-number">1.</span> <span class="toc-text"> 原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#防御"><span class="toc-number">2.</span> <span class="toc-text"> 防御</span></a></li></ol>
     </div> -->
   </span>
 </div>
@@ -120,7 +120,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        安全学习资源
+        xss的攻击和防御
     </h1>
 
 
@@ -139,9 +139,9 @@
       
     <div class="postdate">
       
-        <time datetime="2019-08-23T13:59:47.000Z" itemprop="datePublished">2019-08-23</time>
+        <time datetime="2019-08-26T08:27:06.000Z" itemprop="datePublished">2019-08-26</time>
         
-        (Updated: <time datetime="2019-08-25T06:06:38.539Z" itemprop="dateModified">2019-08-25</time>)
+        (Updated: <time datetime="2019-10-13T00:44:57.961Z" itemprop="dateModified">2019-10-13</time>)
         
       
     </div>
@@ -149,7 +149,7 @@
  
     <div class="article-category">
         <i class="fas fa-archive"></i>
-        <a class="category-link" href="/categories/安全/">安全</a>
+        <a class="category-link" href="/categories/get√/">get√</a>
     </div>
 
  <style>
@@ -165,9 +165,10 @@
   
 
   <div class="content" itemprop="articleBody">
-    <p><a href="https://yangyangwithgnu.github.io/" target="_blank" rel="noopener">yangyangwithgnu</a> - 文章思路很清晰</p>
-<p><a href="https://www.leavesongs.com/" target="_blank" rel="noopener">离别歌</a> - p神博客，代码审计大神</p>
-<p><a href="https://www.sec-wiki.com/" target="_blank" rel="noopener">sec-wiki</a> - 安全综合网站</p>
+    <h2 id="原理"><a class="markdownIt-Anchor" href="#原理"></a> 原理</h2>
+<p>不再多说</p>
+<h2 id="防御"><a class="markdownIt-Anchor" href="#防御"></a> 防御</h2>
+<p>xss的防御主要</p>
 
   </div>
   <script>
@@ -461,21 +462,21 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#原理"><span class="toc-number">1.</span> <span class="toc-text"> 原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#防御"><span class="toc-number">2.</span> <span class="toc-text"> 防御</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/posts/4b2524a1/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/posts/4b2524a1/&text=安全学习资源"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/posts/4b2524a1/&title=安全学习资源"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/posts/4b2524a1/&is_video=false&description=安全学习资源"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=安全学习资源&body=Check out this article: http://yoursite.com/posts/4b2524a1/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/posts/4b2524a1/&title=安全学习资源"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/posts/4b2524a1/&title=安全学习资源"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/posts/4b2524a1/&title=安全学习资源"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/posts/4b2524a1/&title=安全学习资源"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/posts/4b2524a1/&name=安全学习资源&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/posts/633fb4f6/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/posts/633fb4f6/&text=xss的攻击和防御"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/posts/633fb4f6/&title=xss的攻击和防御"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/posts/633fb4f6/&is_video=false&description=xss的攻击和防御"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=xss的攻击和防御&body=Check out this article: http://yoursite.com/posts/633fb4f6/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/posts/633fb4f6/&title=xss的攻击和防御"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/posts/633fb4f6/&title=xss的攻击和防御"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/posts/633fb4f6/&title=xss的攻击和防御"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/posts/633fb4f6/&title=xss的攻击和防御"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/posts/633fb4f6/&name=xss的攻击和防御&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
